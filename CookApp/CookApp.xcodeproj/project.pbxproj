@@ -13,6 +13,8 @@
 		7D209C332909571C009015DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D209C312909571C009015DB /* Main.storyboard */; };
 		7D209C352909571D009015DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D209C342909571D009015DB /* Assets.xcassets */; };
 		7D209C382909571D009015DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D209C362909571D009015DB /* LaunchScreen.storyboard */; };
+		7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59E656290BFB6100129E67 /* CategoriesCVC.swift */; };
+		7D59E659290BFB6100129E67 /* CategoriesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D59E657290BFB6100129E67 /* CategoriesCVC.xib */; };
 		7D8475CF290961B5000D6EA1 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8475CE290961B5000D6EA1 /* Slide.swift */; };
 		7D9FEBA4290AFC400034C650 /* TrendsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */; };
 		7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */; };
@@ -29,6 +31,8 @@
 		7D209C342909571D009015DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D209C372909571D009015DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D209C392909571D009015DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D59E656290BFB6100129E67 /* CategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCVC.swift; sourceTree = "<group>"; };
+		7D59E657290BFB6100129E67 /* CategoriesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCVC.xib; sourceTree = "<group>"; };
 		7D8475CE290961B5000D6EA1 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsCVC.swift; sourceTree = "<group>"; };
 		7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsCVC.xib; sourceTree = "<group>"; };
@@ -50,8 +54,8 @@
 		7D01F37C290AFAFA00653F36 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */,
-				7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */,
+				7D59E655290BFB4600129E67 /* categories */,
+				7D59E654290BFB3000129E67 /* trends */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -94,6 +98,24 @@
 				7D8475CC2909617D000D6EA1 /* view */,
 			);
 			path = "pageController-model";
+			sourceTree = "<group>";
+		};
+		7D59E654290BFB3000129E67 /* trends */ = {
+			isa = PBXGroup;
+			children = (
+				7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */,
+				7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */,
+			);
+			path = trends;
+			sourceTree = "<group>";
+		};
+		7D59E655290BFB4600129E67 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				7D59E656290BFB6100129E67 /* CategoriesCVC.swift */,
+				7D59E657290BFB6100129E67 /* CategoriesCVC.xib */,
+			);
+			path = categories;
 			sourceTree = "<group>";
 		};
 		7D8475CC2909617D000D6EA1 /* view */ = {
@@ -199,6 +221,7 @@
 				7D209C382909571D009015DB /* LaunchScreen.storyboard in Resources */,
 				7D209C352909571D009015DB /* Assets.xcassets in Resources */,
 				7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */,
+				7D59E659290BFB6100129E67 /* CategoriesCVC.xib in Resources */,
 				7D209C332909571C009015DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */,
 				7D209C302909571C009015DB /* PageController.swift in Sources */,
 				7DC1F23529097243001CA5DE /* PageControllerCVC.swift in Sources */,
 				7DCD8A7A2909B8B9001964D4 /* HomePageVC.swift in Sources */,

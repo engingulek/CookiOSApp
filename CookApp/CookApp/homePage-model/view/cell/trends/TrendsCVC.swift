@@ -20,6 +20,10 @@ class TrendsCVC: UICollectionViewCell {
         cookView.layer.cornerRadius = 20
         cookView.layer.zPosition = 1
         cookImageView.layer.zPosition = 0
+        cookNameLabel.textColor = UIColor.init(named: "textColor")
+        cookCategoryLabel.textColor = UIColor.init(named: "textColor")
+        cookRatingLabel.textColor = UIColor.init(named: "textColor")
+        cookMinunteLabel.textColor = UIColor.init(named: "textColor")
         
     }
 
