@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newCookCell" id="gTV-IL-0wX" customClass="newCookCVC" customModule="CookApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="119"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="119"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageFoodTest" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-nV-94m">
+                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="119"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="133.66999999999999" id="5Lh-lW-UfL"/>
+                            <constraint firstAttribute="height" constant="119" id="Xen-62-eFB"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-hP-pfh">
+                        <rect key="frame" x="136.66666666666666" y="5" width="261.33333333333337" height="21.666666666666668"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Food Detail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUp-LP-hHI">
+                        <rect key="frame" x="136.66666666666666" y="49.666666666666664" width="261.33333333333337" height="69.333333333333343"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="c2o-hP-pfh" secondAttribute="trailing" constant="3" id="62s-ec-DXf"/>
+                <constraint firstItem="c2o-hP-pfh" firstAttribute="leading" secondItem="w6Y-nV-94m" secondAttribute="trailing" constant="3" id="7Tu-3q-Gvz"/>
+                <constraint firstItem="w6Y-nV-94m" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IYp-xg-9ZL"/>
+                <constraint firstItem="w6Y-nV-94m" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ltx-hu-ZRB"/>
+                <constraint firstItem="pUp-LP-hHI" firstAttribute="top" secondItem="c2o-hP-pfh" secondAttribute="bottom" constant="23" id="MW9-14-wag"/>
+                <constraint firstItem="pUp-LP-hHI" firstAttribute="leading" secondItem="w6Y-nV-94m" secondAttribute="trailing" constant="3" id="YUn-uy-x96"/>
+                <constraint firstAttribute="bottom" secondItem="w6Y-nV-94m" secondAttribute="bottom" id="jIr-6P-6wf"/>
+                <constraint firstAttribute="trailing" secondItem="pUp-LP-hHI" secondAttribute="trailing" constant="3" id="rS1-qP-bjb"/>
+                <constraint firstItem="c2o-hP-pfh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="rXj-68-xdt"/>
+                <constraint firstAttribute="bottom" secondItem="pUp-LP-hHI" secondAttribute="bottom" id="xre-s9-fHG"/>
+            </constraints>
+            <size key="customSize" width="401" height="119"/>
+            <connections>
+                <outlet property="foodImageView" destination="w6Y-nV-94m" id="Hku-e6-HHg"/>
+            </connections>
+            <point key="canvasLocation" x="200.76923076923077" y="45.142180094786731"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="imageFoodTest" width="1210" height="680"/>
+    </resources>
+</document>

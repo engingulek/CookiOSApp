@@ -16,7 +16,8 @@ class HomePageVC: UIViewController{
     @IBOutlet weak var viewToSearchBar: UIView!
     @IBOutlet weak var trendsCookCollectionView: UICollectionView!
     
-    @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var cookCollectionView: UICollectionView!
+    // @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +28,14 @@ class HomePageVC: UIViewController{
         trendsCookCollectionView.dataSource = self
         trendsCookCollectionView.register(UINib(nibName: "TrendsCVC", bundle: nil),forCellWithReuseIdentifier: "cookCell")
         
+        cookCollectionView.delegate = self
+        cookCollectionView.dataSource = self
         
-        categoryCollectionView.delegate = self
+        /*categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
-        categoryCollectionView.register(UINib(nibName: "CategoriesCVC", bundle: nil), forCellWithReuseIdentifier: "categoryCell")
+        categoryCollectionView.register(UINib(nibName: "CategoriesCVC", bundle: nil), forCellWithReuseIdentifier: "categoryCell")*/
+        
+        cookCollectionView.register(UINib(nibName: "newCookCVC", bundle: nil), forCellWithReuseIdentifier: "newCookCell")
         setupUI()
         
         
@@ -60,15 +65,15 @@ class HomePageVC: UIViewController{
         /// Category Collection View Design
         
         let designCVC : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        let widthCVC = self.categoryCollectionView.layer.frame.size.width
-        let heightCVC = self.categoryCollectionView.layer.frame.size.height
+        let widthCVC = self.cookCollectionView.layer.frame.size.width
+        let heightCVC = self.cookCollectionView.layer.frame.size.height
         
-        designCVC.sectionInset = UIEdgeInsets(top: 15, left: 5, bottom: 10, right: 5)
-        designCVC.itemSize = CGSize(width: widthCVC/3.5, height: heightCVC/1.2)
-        designCVC.minimumLineSpacing = 5
-        designCVC.minimumInteritemSpacing = 5
-        designCVC.scrollDirection = .horizontal
-        self.categoryCollectionView.collectionViewLayout = designCVC
+        designCVC.sectionInset = UIEdgeInsets(top: 15, left: 0, bottom: 10, right: 0)
+        designCVC.itemSize = CGSize(width: widthCVC, height: heightCVC/4)
+        designCVC.minimumLineSpacing = 30
+        designCVC.minimumInteritemSpacing = 40
+        designCVC.scrollDirection = .vertical
+        self.cookCollectionView.collectionViewLayout = designCVC
     }
 }
 
@@ -78,32 +83,31 @@ extension HomePageVC : UISearchBarDelegate {
 
 extension HomePageVC : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.trendsCookCollectionView {
-            return 5
-        } else {
-            return 5
-        }
-    
-        
+        return 5
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
+        /*let cell : TrendsCVC = trendsCookCollectionView.dequeueReusableCell(withReuseIdentifier: "cookCell", for: indexPath) as! TrendsCVC
+        cell.layer.cornerRadius = 20
+        return cell*/
         
         if collectionView == self.trendsCookCollectionView {
             let cell : TrendsCVC = trendsCookCollectionView.dequeueReusableCell(withReuseIdentifier: "cookCell", for: indexPath) as! TrendsCVC
             cell.layer.cornerRadius = 20
             return cell
         }else{
-            let cell : CategoriesCVC = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoriesCVC
             
-            cell.layer.cornerRadius = 15
-            cell.layer.borderWidth = 1
-            cell.layer.borderColor = UIColor.red.cgColor
-            let widthCVC = self.categoryCollectionView.layer.frame.size.width
-            let heightCVC = self.categoryCollectionView.layer.frame.size.height
+            let cell : newCookCVC = cookCollectionView.dequeueReusableCell(withReuseIdentifier: "newCookCell", for: indexPath) as! newCookCVC
+           
+            
+         
+           
+            let widthCVC = self.cookCollectionView.layer.frame.size.width
             cell.layer.frame.size.height = 80
-            cell.layer.frame.size.width = widthCVC/4.5
+            cell.layer.frame.size.width = widthCVC
             return cell
         }
         
