@@ -9,17 +9,13 @@ import UIKit
 
 class HomePageVC: UIViewController{
     @IBOutlet weak var homePageSearchBar: UISearchBar!
-    
     @IBOutlet weak var viewToSearchBar: UIView!
     @IBOutlet weak var trendsCookCollectionView: UICollectionView!
-    
     @IBOutlet weak var cookCollectionView: UICollectionView!
-    // @IBOutlet weak var categoryCollectionView: UICollectionView!
     var homePageObject : ViewToPresenterHomePageProtocol?
-    var testTrends : String?
-    var testNew : String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         HomePageRouter.createView(view: self)
         homePageSearchBar.delegate = self
         homePageSearchBar.searchTextField.layer.backgroundColor = UIColor.white.cgColor
@@ -65,12 +61,14 @@ class HomePageVC: UIViewController{
 }
 
 extension  HomePageVC : PresenterToViewHomePageProtocol {
-    func toTrendsCookView(test: String) {
-        testTrends = test
+    func toTrendsCookView(test: Array<String>) {
+  
+        
     }
     
-    func toNewCookView(test: String) {
-        testNew = test
+    func toNewCookView(test: Array<String>) {
+       
+  
     }
     
     
@@ -79,12 +77,16 @@ extension  HomePageVC : PresenterToViewHomePageProtocol {
 
 extension HomePageVC : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 5
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.trendsCookCollectionView {
+            
+          
+            
             let cell : TrendsCVC = trendsCookCollectionView.dequeueReusableCell(withReuseIdentifier: "cookCell", for: indexPath) as! TrendsCVC
             cell.layer.cornerRadius = 20
             return cell

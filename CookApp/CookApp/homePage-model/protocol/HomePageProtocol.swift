@@ -7,11 +7,16 @@
 
 import Foundation
 
+
+
 protocol ViewToPresenterHomePageProtocol {
     var interactor : PresenterToInteractorHomePageProtocol? {get set}
     var homePageView : PresenterToViewHomePageProtocol? {get set}
     func getCookTrendsAction()
     func getCookNewAction()
+
+    
+   
     
     
 }
@@ -24,13 +29,19 @@ protocol PresenterToInteractorHomePageProtocol {
 
 
 protocol InteractorToPresenterHomePageProtocol {
-    func toTrendsCookPresenter(test:String)
-    func toNewCookPresenter(test:String)
+    func toTrendsCookPresenter(test:Array<String>)
+    func toNewCookPresenter(test:Array<String>)
+    
+
+     
 }
 
 protocol PresenterToViewHomePageProtocol {
-    func toTrendsCookView(test:String)
-    func toNewCookView(test:String)
+    func toTrendsCookView(test:Array<String>)
+    func toNewCookView(test:Array<String>)
+
+       
+    
     
     
 }

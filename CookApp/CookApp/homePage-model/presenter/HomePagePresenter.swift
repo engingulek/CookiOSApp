@@ -7,7 +7,16 @@
 
 import Foundation
 
+ 
+
+
 class HomePagePresenter : ViewToPresenterHomePageProtocol {
+    var trendsList = [String]()
+ 
+    
+  
+   
+   
     var interactor: PresenterToInteractorHomePageProtocol?
     
     var homePageView: PresenterToViewHomePageProtocol?
@@ -21,23 +30,28 @@ class HomePagePresenter : ViewToPresenterHomePageProtocol {
     }
     
     
+    
+    
+        
 }
 
 
+
 extension HomePagePresenter : InteractorToPresenterHomePageProtocol{
+   
+ 
     
     
-    
-    
-    func toTrendsCookPresenter(test: String) {
+    func toTrendsCookPresenter(test: Array<String>) {
+        
         homePageView?.toTrendsCookView(test: test)
+        
     }
     
-    func toNewCookPresenter(test: String) {
+    func toNewCookPresenter(test: Array<String>) {
         homePageView?.toNewCookView(test: test)
+        
     }
-    
-  
     
     
 }

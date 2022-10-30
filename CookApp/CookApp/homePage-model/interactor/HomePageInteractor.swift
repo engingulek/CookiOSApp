@@ -11,11 +11,11 @@ class HomePageInteractor : PresenterToInteractorHomePageProtocol {
     var homePagePresenter: InteractorToPresenterHomePageProtocol?
     
     func getCookTrends() {
-        homePagePresenter?.toTrendsCookPresenter(test: "trens")
+        homePagePresenter?.toTrendsCookPresenter(test: ["trends"])
     }
     
     func getCookNew() {
-        homePagePresenter?.toNewCookPresenter(test: "new")
+        homePagePresenter?.toNewCookPresenter(test: ["new"])
     }
     
   
