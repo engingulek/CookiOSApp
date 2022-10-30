@@ -8,9 +8,6 @@
 import UIKit
 
 class HomePageVC: UIViewController{
-  
-    
-
     @IBOutlet weak var homePageSearchBar: UISearchBar!
     
     @IBOutlet weak var viewToSearchBar: UIView!
@@ -18,9 +15,12 @@ class HomePageVC: UIViewController{
     
     @IBOutlet weak var cookCollectionView: UICollectionView!
     // @IBOutlet weak var categoryCollectionView: UICollectionView!
-    
+    var homePageObject : ViewToPresenterHomePageProtocol?
+    var testTrends : String?
+    var testNew : String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        HomePageRouter.createView(view: self)
         homePageSearchBar.delegate = self
         homePageSearchBar.searchTextField.layer.backgroundColor = UIColor.white.cgColor
         homePageSearchBar.searchTextField.layer.cornerRadius = 15
@@ -30,28 +30,15 @@ class HomePageVC: UIViewController{
         
         cookCollectionView.delegate = self
         cookCollectionView.dataSource = self
-        
-        /*categoryCollectionView.delegate = self
-        categoryCollectionView.dataSource = self
-        categoryCollectionView.register(UINib(nibName: "CategoriesCVC", bundle: nil), forCellWithReuseIdentifier: "categoryCell")*/
-        
         cookCollectionView.register(UINib(nibName: "newCookCVC", bundle: nil), forCellWithReuseIdentifier: "newCookCell")
         setupUI()
-        
-        
-        //homePageSearchBar.setSearchFieldBackgroundImage(UIImage(named: "bake"), for: UIControl.State.normal)
-        
+        homePageObject?.getCookNewAction()
+        homePageObject?.getCookTrendsAction()
     }
     
     private func setupUI(){
-        
-        
-        
         self.viewToSearchBar.backgroundColor = UIColor.init(named: "searchBarViewColor")
         homePageSearchBar.barTintColor  = UIColor.init(named: "searchBarViewColor")
-        
-        // MARK: - Collection View Design
-        ///Trends CollectionView design
         let designTCV : UICollectionViewFlowLayout  = UICollectionViewFlowLayout()
         let widthTCV  = self.trendsCookCollectionView.layer.frame.size.width
         let heightTCV  = self.trendsCookCollectionView.layer.frame.size.height
@@ -77,9 +64,18 @@ class HomePageVC: UIViewController{
     }
 }
 
-extension HomePageVC : UISearchBarDelegate {
+extension  HomePageVC : PresenterToViewHomePageProtocol {
+    func toTrendsCookView(test: String) {
+        testTrends = test
+    }
+    
+    func toNewCookView(test: String) {
+        testNew = test
+    }
+    
     
 }
+
 
 extension HomePageVC : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -88,12 +84,6 @@ extension HomePageVC : UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        
-        /*let cell : TrendsCVC = trendsCookCollectionView.dequeueReusableCell(withReuseIdentifier: "cookCell", for: indexPath) as! TrendsCVC
-        cell.layer.cornerRadius = 20
-        return cell*/
-        
         if collectionView == self.trendsCookCollectionView {
             let cell : TrendsCVC = trendsCookCollectionView.dequeueReusableCell(withReuseIdentifier: "cookCell", for: indexPath) as! TrendsCVC
             cell.layer.cornerRadius = 20
@@ -101,20 +91,14 @@ extension HomePageVC : UICollectionViewDelegate, UICollectionViewDataSource {
         }else{
             
             let cell : newCookCVC = cookCollectionView.dequeueReusableCell(withReuseIdentifier: "newCookCell", for: indexPath) as! newCookCVC
-           
-            
-         
-           
             let widthCVC = self.cookCollectionView.layer.frame.size.width
             cell.layer.frame.size.height = 80
             cell.layer.frame.size.width = widthCVC
             return cell
         }
-        
-       
-        
     }
-    
-    
+}
+
+extension HomePageVC : UISearchBarDelegate {
     
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0BB101290EB85C00D1B6FC /* homePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB100290EB85C00D1B6FC /* homePagePresenter.swift */; };
+		7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB103290EB8D300D1B6FC /* HomePageProtocol.swift */; };
+		7D0BB108290EBBD900D1B6FC /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB107290EBBD900D1B6FC /* HomePageInteractor.swift */; };
+		7D0BB10B290EBF3E00D1B6FC /* HomePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB10A290EBF3E00D1B6FC /* HomePageRouter.swift */; };
 		7D209C2C2909571C009015DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D209C2B2909571C009015DB /* AppDelegate.swift */; };
 		7D209C2E2909571C009015DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D209C2D2909571C009015DB /* SceneDelegate.swift */; };
 		7D209C302909571C009015DB /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D209C2F2909571C009015DB /* PageController.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D0BB100290EB85C00D1B6FC /* homePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePagePresenter.swift; sourceTree = "<group>"; };
+		7D0BB103290EB8D300D1B6FC /* HomePageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProtocol.swift; sourceTree = "<group>"; };
+		7D0BB107290EBBD900D1B6FC /* HomePageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageInteractor.swift; sourceTree = "<group>"; };
+		7D0BB10A290EBF3E00D1B6FC /* HomePageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRouter.swift; sourceTree = "<group>"; };
 		7D209C282909571C009015DB /* CookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D209C2B2909571C009015DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D209C2D2909571C009015DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +70,45 @@
 				7D59E654290BFB3000129E67 /* trends */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		7D0BB0FF290EB84000D1B6FC /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7D0BB100290EB85C00D1B6FC /* homePagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7D0BB102290EB8C200D1B6FC /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7D0BB103290EB8D300D1B6FC /* HomePageProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		7D0BB105290EBBBE00D1B6FC /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7D0BB107290EBBD900D1B6FC /* HomePageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		7D0BB106290EBBC800D1B6FC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		7D0BB109290EBF2900D1B6FC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7D0BB10A290EBF3E00D1B6FC /* HomePageRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		7D209C1F2909571C009015DB = {
@@ -184,6 +231,11 @@
 		7DCD8A752909B7F0001964D4 /* homePage-model */ = {
 			isa = PBXGroup;
 			children = (
+				7D0BB109290EBF2900D1B6FC /* Router */,
+				7D0BB106290EBBC800D1B6FC /* Entity */,
+				7D0BB105290EBBBE00D1B6FC /* interactor */,
+				7D0BB102290EB8C200D1B6FC /* protocol */,
+				7D0BB0FF290EB84000D1B6FC /* presenter */,
 				7DCD8A762909B804001964D4 /* view */,
 			);
 			path = "homePage-model";
@@ -272,7 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0BB108290EBBD900D1B6FC /* HomePageInteractor.swift in Sources */,
+				7D0BB101290EB85C00D1B6FC /* homePagePresenter.swift in Sources */,
 				7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */,
+				7D0BB10B290EBF3E00D1B6FC /* HomePageRouter.swift in Sources */,
 				7D209C302909571C009015DB /* PageController.swift in Sources */,
 				7DC1F23529097243001CA5DE /* PageControllerCVC.swift in Sources */,
 				7D59E660290C576900129E67 /* newCookCVC.swift in Sources */,
@@ -280,6 +335,7 @@
 				7D9FEBA4290AFC400034C650 /* TrendsCVC.swift in Sources */,
 				7D209C2C2909571C009015DB /* AppDelegate.swift in Sources */,
 				7D209C2E2909571C009015DB /* SceneDelegate.swift in Sources */,
+				7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */,
 				7D8475CF290961B5000D6EA1 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
