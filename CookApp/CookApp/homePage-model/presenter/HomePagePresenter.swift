@@ -42,7 +42,7 @@ extension HomePagePresenter : InteractorToPresenterHomePageProtocol{
  
     
     
-    func toTrendsCookPresenter(test: Array<String>) {
+    func toTrendsCookPresenter(test: Array<Cook>) {
         
         homePageView?.toTrendsCookView(test: test)
         

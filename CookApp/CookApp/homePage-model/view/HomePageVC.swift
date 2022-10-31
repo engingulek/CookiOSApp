@@ -13,6 +13,7 @@ class HomePageVC: UIViewController{
     @IBOutlet weak var trendsCookCollectionView: UICollectionView!
     @IBOutlet weak var cookCollectionView: UICollectionView!
     var homePageObject : ViewToPresenterHomePageProtocol?
+    var trendList = [Cook]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +33,14 @@ class HomePageVC: UIViewController{
         homePageObject?.getCookTrendsAction()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     private func setupUI(){
+        
+        
+        
         self.viewToSearchBar.backgroundColor = UIColor.init(named: "searchBarViewColor")
         homePageSearchBar.barTintColor  = UIColor.init(named: "searchBarViewColor")
         let designTCV : UICollectionViewFlowLayout  = UICollectionViewFlowLayout()
@@ -61,7 +69,12 @@ class HomePageVC: UIViewController{
 }
 
 extension  HomePageVC : PresenterToViewHomePageProtocol {
-    func toTrendsCookView(test: Array<String>) {
+    func toTrendsCookView(test: Array<Cook>) {
+        self.trendList = test
+        
+        self.cookCollectionView.reloadData()
+        
+     
   
         
     }
@@ -77,8 +90,12 @@ extension  HomePageVC : PresenterToViewHomePageProtocol {
 
 extension HomePageVC : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.trendsCookCollectionView {
+            return self.trendList.count
+        }else{
+            return 2
+        }
         
-        return 5
         
     }
     

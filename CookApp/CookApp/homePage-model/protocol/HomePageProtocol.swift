@@ -29,7 +29,7 @@ protocol PresenterToInteractorHomePageProtocol {
 
 
 protocol InteractorToPresenterHomePageProtocol {
-    func toTrendsCookPresenter(test:Array<String>)
+    func toTrendsCookPresenter(test:Array<Cook>)
     func toNewCookPresenter(test:Array<String>)
     
 
@@ -37,7 +37,7 @@ protocol InteractorToPresenterHomePageProtocol {
 }
 
 protocol PresenterToViewHomePageProtocol {
-    func toTrendsCookView(test:Array<String>)
+    func toTrendsCookView(test:Array<Cook>)
     func toNewCookView(test:Array<String>)
 
        
