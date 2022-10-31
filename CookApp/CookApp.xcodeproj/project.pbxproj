@@ -20,6 +20,7 @@
 		7D209C352909571D009015DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D209C342909571D009015DB /* Assets.xcassets */; };
 		7D209C382909571D009015DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D209C362909571D009015DB /* LaunchScreen.storyboard */; };
 		7D491255290FE43F00462C34 /* CookPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D491254290FE43F00462C34 /* CookPageController.swift */; };
+		7D491259290FEBB900462C34 /* DetailPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D491258290FEBB900462C34 /* DetailPageController.swift */; };
 		7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59E656290BFB6100129E67 /* CategoriesCVC.swift */; };
 		7D59E659290BFB6100129E67 /* CategoriesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D59E657290BFB6100129E67 /* CategoriesCVC.xib */; };
 		7D59E660290C576900129E67 /* newCookCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59E65E290C576900129E67 /* newCookCVC.swift */; };
@@ -47,6 +48,7 @@
 		7D209C372909571D009015DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D209C392909571D009015DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D491254290FE43F00462C34 /* CookPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPageController.swift; sourceTree = "<group>"; };
+		7D491258290FEBB900462C34 /* DetailPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageController.swift; sourceTree = "<group>"; };
 		7D59E656290BFB6100129E67 /* CategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCVC.swift; sourceTree = "<group>"; };
 		7D59E657290BFB6100129E67 /* CategoriesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCVC.xib; sourceTree = "<group>"; };
 		7D59E65E290C576900129E67 /* newCookCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newCookCVC.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		7D209C2A2909571C009015DB /* CookApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D491256290FEB2B00462C34 /* detailPage-model */,
 				7D59E65A290C55FD00129E67 /* cookPage-model */,
 				7DCD8A752909B7F0001964D4 /* homePage-model */,
 				7D209C4029095A26009015DB /* pageController-model */,
@@ -158,6 +161,22 @@
 				7D8475CC2909617D000D6EA1 /* view */,
 			);
 			path = "pageController-model";
+			sourceTree = "<group>";
+		};
+		7D491256290FEB2B00462C34 /* detailPage-model */ = {
+			isa = PBXGroup;
+			children = (
+				7D491257290FEB3700462C34 /* view */,
+			);
+			path = "detailPage-model";
+			sourceTree = "<group>";
+		};
+		7D491257290FEB3700462C34 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7D491258290FEBB900462C34 /* DetailPageController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		7D59E654290BFB3000129E67 /* trends */ = {
@@ -335,6 +354,7 @@
 			files = (
 				7D491255290FE43F00462C34 /* CookPageController.swift in Sources */,
 				7D0BB108290EBBD900D1B6FC /* HomePageInteractor.swift in Sources */,
+				7D491259290FEBB900462C34 /* DetailPageController.swift in Sources */,
 				7D0BB101290EB85C00D1B6FC /* HomePagePresenter.swift in Sources */,
 				7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */,
 				7D0BB10B290EBF3E00D1B6FC /* HomePageRouter.swift in Sources */,

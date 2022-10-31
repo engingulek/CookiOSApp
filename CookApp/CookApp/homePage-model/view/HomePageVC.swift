@@ -116,6 +116,12 @@ extension HomePageVC : UICollectionViewDelegate, UICollectionViewDataSource {
             return cell
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.trendsCookCollectionView {
+            performSegue(withIdentifier: "homePageToDetailPage", sender: nil)
+        }
+    }
 }
 
 extension HomePageVC : UISearchBarDelegate {
