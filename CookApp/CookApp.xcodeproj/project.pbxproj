@@ -30,8 +30,8 @@
 		7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */; };
 		7DC1F23529097243001CA5DE /* PageControllerCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1F23429097243001CA5DE /* PageControllerCVC.swift */; };
 		7DCD8A7A2909B8B9001964D4 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCD8A792909B8B9001964D4 /* HomePageVC.swift */; };
-		7DE14E67291036DD00B3B896 /* IngredientsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE14E65291036DD00B3B896 /* IngredientsCVC.swift */; };
-		7DE14E68291036DD00B3B896 /* IngredientsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DE14E66291036DD00B3B896 /* IngredientsCVC.xib */; };
+		7DFBD9462916CB6300C73B8C /* IngredientTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBD9442916CB6300C73B8C /* IngredientTVC.swift */; };
+		7DFBD9472916CB6300C73B8C /* IngredientTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBD9452916CB6300C73B8C /* IngredientTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,8 +60,8 @@
 		7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsCVC.xib; sourceTree = "<group>"; };
 		7DC1F23429097243001CA5DE /* PageControllerCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllerCVC.swift; sourceTree = "<group>"; };
 		7DCD8A792909B8B9001964D4 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
-		7DE14E65291036DD00B3B896 /* IngredientsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCVC.swift; sourceTree = "<group>"; };
-		7DE14E66291036DD00B3B896 /* IngredientsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsCVC.xib; sourceTree = "<group>"; };
+		7DFBD9442916CB6300C73B8C /* IngredientTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTVC.swift; sourceTree = "<group>"; };
+		7DFBD9452916CB6300C73B8C /* IngredientTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,8 +294,8 @@
 		7DE14E692910457700B3B896 /* ingredient */ = {
 			isa = PBXGroup;
 			children = (
-				7DE14E65291036DD00B3B896 /* IngredientsCVC.swift */,
-				7DE14E66291036DD00B3B896 /* IngredientsCVC.xib */,
+				7DFBD9442916CB6300C73B8C /* IngredientTVC.swift */,
+				7DFBD9452916CB6300C73B8C /* IngredientTVC.xib */,
 			);
 			path = ingredient;
 			sourceTree = "<group>";
@@ -358,12 +358,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFBD9472916CB6300C73B8C /* IngredientTVC.xib in Resources */,
 				7D209C382909571D009015DB /* LaunchScreen.storyboard in Resources */,
 				7D209C352909571D009015DB /* Assets.xcassets in Resources */,
 				7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */,
 				7D59E661290C576900129E67 /* newCookCVC.xib in Resources */,
 				7D59E659290BFB6100129E67 /* CategoriesCVC.xib in Resources */,
-				7DE14E68291036DD00B3B896 /* IngredientsCVC.xib in Resources */,
 				7D209C332909571C009015DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +377,7 @@
 			files = (
 				7D491255290FE43F00462C34 /* CookPageController.swift in Sources */,
 				7D0BB108290EBBD900D1B6FC /* HomePageInteractor.swift in Sources */,
+				7DFBD9462916CB6300C73B8C /* IngredientTVC.swift in Sources */,
 				7D491259290FEBB900462C34 /* DetailPageController.swift in Sources */,
 				7D0BB101290EB85C00D1B6FC /* HomePagePresenter.swift in Sources */,
 				7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */,
@@ -386,7 +387,6 @@
 				7D59E660290C576900129E67 /* newCookCVC.swift in Sources */,
 				7DCD8A7A2909B8B9001964D4 /* HomePageVC.swift in Sources */,
 				7D9FEBA4290AFC400034C650 /* TrendsCVC.swift in Sources */,
-				7DE14E67291036DD00B3B896 /* IngredientsCVC.swift in Sources */,
 				7D0BB10D290ED52800D1B6FC /* Cook.swift in Sources */,
 				7D209C2C2909571C009015DB /* AppDelegate.swift in Sources */,
 				7D0BB10F290ED69300D1B6FC /* Category.swift in Sources */,
