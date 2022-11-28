@@ -53,7 +53,7 @@ class HomePageVC: UIViewController{
         designTCV.scrollDirection = .horizontal
         self.trendsCookCollectionView.collectionViewLayout = designTCV
         
-        /// Category Collection View Design
+        
         
         let designCVC : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         let widthCVC = self.cookCollectionView.layer.frame.size.width
@@ -119,6 +119,8 @@ extension HomePageVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.trendsCookCollectionView {
+            performSegue(withIdentifier: "homePageToDetailPage", sender: nil)
+        }else if collectionView == self.cookCollectionView {
             performSegue(withIdentifier: "homePageToDetailPage", sender: nil)
         }
     }

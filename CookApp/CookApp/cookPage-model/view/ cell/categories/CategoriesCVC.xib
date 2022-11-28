@@ -16,12 +16,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="106" height="92"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweets" translatesAutoresizingMaskIntoConstraints="NO" id="gYN-n9-Kc1">
-                        <rect key="frame" x="0.0" y="0.0" width="106" height="64.333333333333329"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48p-C2-KzB">
-                        <rect key="frame" x="0.0" y="65" width="106" height="27"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRm-4F-dpI">
+                        <rect key="frame" x="0.0" y="0.0" width="106" height="92"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -30,23 +27,16 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="48p-C2-KzB" firstAttribute="top" secondItem="gYN-n9-Kc1" secondAttribute="bottom" constant="0.67000000000000004" id="0n1-Sl-3em"/>
-                <constraint firstItem="48p-C2-KzB" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" id="HgP-f2-039"/>
-                <constraint firstItem="gYN-n9-Kc1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KSp-1I-5LN"/>
-                <constraint firstAttribute="trailing" secondItem="gYN-n9-Kc1" secondAttribute="trailing" id="dAK-RD-BWK"/>
-                <constraint firstItem="48p-C2-KzB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eef-7B-1hV"/>
-                <constraint firstAttribute="bottom" secondItem="48p-C2-KzB" secondAttribute="bottom" id="gqM-fz-zdR"/>
-                <constraint firstItem="gYN-n9-Kc1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kLW-uw-I2M"/>
-                <constraint firstAttribute="trailing" secondItem="48p-C2-KzB" secondAttribute="trailing" id="l4t-dg-cj8"/>
-                <constraint firstItem="48p-C2-KzB" firstAttribute="height" secondItem="ZTg-uK-7eu" secondAttribute="height" multiplier="0.6" id="lW7-4D-9yo"/>
-                <constraint firstItem="gYN-n9-Kc1" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.7" id="wvE-It-CYD"/>
-                <constraint firstItem="gYN-n9-Kc1" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="xa4-Is-l8W"/>
+                <constraint firstAttribute="bottom" secondItem="lRm-4F-dpI" secondAttribute="bottom" id="Kdr-sF-qVB"/>
+                <constraint firstAttribute="trailing" secondItem="lRm-4F-dpI" secondAttribute="trailing" id="aaj-Et-l6d"/>
+                <constraint firstItem="lRm-4F-dpI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jqA-Oj-3UT"/>
+                <constraint firstItem="lRm-4F-dpI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sg1-lb-212"/>
             </constraints>
             <size key="customSize" width="106" height="92"/>
+            <connections>
+                <outlet property="categoryLabel" destination="lRm-4F-dpI" id="h9z-Zb-eEB"/>
+            </connections>
             <point key="canvasLocation" x="-26.153846153846153" y="35.545023696682463"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="sweets" width="512" height="512"/>
-    </resources>
 </document>

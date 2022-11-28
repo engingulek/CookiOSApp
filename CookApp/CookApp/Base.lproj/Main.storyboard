@@ -355,21 +355,44 @@
             </objects>
             <point key="canvasLocation" x="3029.5999999999999" y="-458.86699507389164"/>
         </scene>
-        <!--Cooks-->
+        <!--Cook Page Controller-->
         <scene sceneID="vNl-jP-QSu">
             <objects>
                 <viewController id="kgu-RO-urY" customClass="CookPageController" customModule="CookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YjY-ln-nUD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n0m-YA-lzO">
+                                <rect key="frame" x="0.0" y="91" width="375" height="81.333333333333314"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lM0-tv-BYj">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Xvw-D0-e6B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n0m-YA-lzO" firstAttribute="top" secondItem="Xvw-D0-e6B" secondAttribute="top" id="4ia-BR-YNx"/>
+                            <constraint firstItem="n0m-YA-lzO" firstAttribute="height" secondItem="YjY-ln-nUD" secondAttribute="height" multiplier="0.1" id="5DS-gi-8Yi"/>
+                            <constraint firstItem="n0m-YA-lzO" firstAttribute="trailing" secondItem="Xvw-D0-e6B" secondAttribute="trailing" id="BRc-8A-yWe"/>
+                            <constraint firstItem="n0m-YA-lzO" firstAttribute="leading" secondItem="Xvw-D0-e6B" secondAttribute="leading" id="PAa-Op-NZF"/>
+                            <constraint firstItem="n0m-YA-lzO" firstAttribute="width" secondItem="YjY-ln-nUD" secondAttribute="width" id="wYa-BZ-yZH"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cooks" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" style="editor" id="mEq-tF-Eeu"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" style="browser" id="mEq-tF-Eeu"/>
+                    <connections>
+                        <outlet property="cookCategoriesCollectionView" destination="n0m-YA-lzO" id="wcn-ac-wXB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWI-7f-4A7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4058" y="-1179"/>
+            <point key="canvasLocation" x="4056.8000000000002" y="-1179.3103448275863"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kJq-OB-NhR">
