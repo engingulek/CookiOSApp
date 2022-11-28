@@ -25,6 +25,8 @@
 		7D59E659290BFB6100129E67 /* CategoriesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D59E657290BFB6100129E67 /* CategoriesCVC.xib */; };
 		7D59E660290C576900129E67 /* newCookCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59E65E290C576900129E67 /* newCookCVC.swift */; };
 		7D59E661290C576900129E67 /* newCookCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D59E65F290C576900129E67 /* newCookCVC.xib */; };
+		7D8065812934E9400023E60E /* CookTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80657F2934E9400023E60E /* CookTVC.swift */; };
+		7D8065822934E9400023E60E /* CookTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8065802934E9400023E60E /* CookTVC.xib */; };
 		7D8475CF290961B5000D6EA1 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8475CE290961B5000D6EA1 /* Slide.swift */; };
 		7D9FEBA4290AFC400034C650 /* TrendsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */; };
 		7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */; };
@@ -55,6 +57,8 @@
 		7D59E657290BFB6100129E67 /* CategoriesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCVC.xib; sourceTree = "<group>"; };
 		7D59E65E290C576900129E67 /* newCookCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newCookCVC.swift; sourceTree = "<group>"; };
 		7D59E65F290C576900129E67 /* newCookCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newCookCVC.xib; sourceTree = "<group>"; };
+		7D80657F2934E9400023E60E /* CookTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTVC.swift; sourceTree = "<group>"; };
+		7D8065802934E9400023E60E /* CookTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CookTVC.xib; sourceTree = "<group>"; };
 		7D8475CE290961B5000D6EA1 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsCVC.swift; sourceTree = "<group>"; };
 		7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsCVC.xib; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 		7D59E65C290C56A200129E67 /*  cell */ = {
 			isa = PBXGroup;
 			children = (
+				7D80657A2934E8EC0023E60E /* cooks */,
 				7D59E655290BFB4600129E67 /* categories */,
 			);
 			path = " cell";
@@ -234,6 +239,15 @@
 				7D59E65F290C576900129E67 /* newCookCVC.xib */,
 			);
 			path = cook;
+			sourceTree = "<group>";
+		};
+		7D80657A2934E8EC0023E60E /* cooks */ = {
+			isa = PBXGroup;
+			children = (
+				7D80657F2934E9400023E60E /* CookTVC.swift */,
+				7D8065802934E9400023E60E /* CookTVC.xib */,
+			);
+			path = cooks;
 			sourceTree = "<group>";
 		};
 		7D8475CC2909617D000D6EA1 /* view */ = {
@@ -363,6 +377,7 @@
 				7D209C352909571D009015DB /* Assets.xcassets in Resources */,
 				7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */,
 				7D59E661290C576900129E67 /* newCookCVC.xib in Resources */,
+				7D8065822934E9400023E60E /* CookTVC.xib in Resources */,
 				7D59E659290BFB6100129E67 /* CategoriesCVC.xib in Resources */,
 				7D209C332909571C009015DB /* Main.storyboard in Resources */,
 			);
@@ -380,6 +395,7 @@
 				7DFBD9462916CB6300C73B8C /* IngredientTVC.swift in Sources */,
 				7D491259290FEBB900462C34 /* DetailPageController.swift in Sources */,
 				7D0BB101290EB85C00D1B6FC /* HomePagePresenter.swift in Sources */,
+				7D8065812934E9400023E60E /* CookTVC.swift in Sources */,
 				7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */,
 				7D0BB10B290EBF3E00D1B6FC /* HomePageRouter.swift in Sources */,
 				7D209C302909571C009015DB /* PageController.swift in Sources */,

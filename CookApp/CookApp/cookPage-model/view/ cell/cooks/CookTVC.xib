@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cookCell" rowHeight="119" id="KGk-i7-Jjw" customClass="CookTVC" customModule="CookApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="387" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="387" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cooking" translatesAutoresizingMaskIntoConstraints="NO" id="WLT-BL-w5i">
+                        <rect key="frame" x="20" y="15" width="111" height="89"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dsdadsda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA1-IM-wVJ">
+                        <rect key="frame" x="136" y="15" width="246" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Detail Food Detail Food Detail Food Detail Food Detail Food Detail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTJ-g4-GeB">
+                        <rect key="frame" x="136" y="41" width="226" height="62"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QA1-IM-wVJ" firstAttribute="leading" secondItem="WLT-BL-w5i" secondAttribute="trailing" constant="5" id="4pk-jB-EMs"/>
+                    <constraint firstAttribute="trailing" secondItem="QA1-IM-wVJ" secondAttribute="trailing" constant="5" id="F62-B6-eib"/>
+                    <constraint firstItem="WLT-BL-w5i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="RWr-SY-zFh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ZTJ-g4-GeB" secondAttribute="trailing" constant="5" id="a2V-93-Otk"/>
+                    <constraint firstAttribute="bottom" secondItem="QA1-IM-wVJ" secondAttribute="bottom" constant="83" id="bNx-ie-U8w"/>
+                    <constraint firstItem="ZTJ-g4-GeB" firstAttribute="leading" secondItem="WLT-BL-w5i" secondAttribute="trailing" constant="5" id="cRy-b2-Ulv"/>
+                    <constraint firstAttribute="bottom" secondItem="WLT-BL-w5i" secondAttribute="bottom" constant="15" id="h7C-dI-Rgr"/>
+                    <constraint firstItem="QA1-IM-wVJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="kRM-ok-zn7"/>
+                    <constraint firstItem="ZTJ-g4-GeB" firstAttribute="top" secondItem="QA1-IM-wVJ" secondAttribute="bottom" constant="5" id="ksg-Yi-2xl"/>
+                    <constraint firstItem="WLT-BL-w5i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="mvj-Gu-XuL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZTJ-g4-GeB" secondAttribute="bottom" constant="5" id="pdZ-HB-Oeh"/>
+                    <constraint firstAttribute="trailing" secondItem="WLT-BL-w5i" secondAttribute="trailing" constant="256" id="ucM-Ug-8Dh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="63.846153846153847" y="58.649289099526065"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cooking" width="512" height="512"/>
+    </resources>
+</document>
