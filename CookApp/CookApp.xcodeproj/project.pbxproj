@@ -150,6 +150,7 @@
 		7D209C2A2909571C009015DB /* CookApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D66C12F29434C5F00F49A23 /* addCookPage-model */,
 				7D491256290FEB2B00462C34 /* detailPage-model */,
 				7D59E65A290C55FD00129E67 /* cookPage-model */,
 				7DCD8A752909B7F0001964D4 /* homePage-model */,
@@ -160,7 +161,6 @@
 				7D209C342909571D009015DB /* Assets.xcassets */,
 				7D209C362909571D009015DB /* LaunchScreen.storyboard */,
 				7D209C392909571D009015DB /* Info.plist */,
-				7DC1BDA729428D38004866AB /* AddCookView.swift */,
 			);
 			path = CookApp;
 			sourceTree = "<group>";
@@ -177,6 +177,7 @@
 		7D491256290FEB2B00462C34 /* detailPage-model */ = {
 			isa = PBXGroup;
 			children = (
+				7D66C13029434F5800F49A23 /* entity */,
 				7D491257290FEB3700462C34 /* view */,
 			);
 			path = "detailPage-model";
@@ -242,6 +243,21 @@
 				7D59E65F290C576900129E67 /* newCookCVC.xib */,
 			);
 			path = cook;
+			sourceTree = "<group>";
+		};
+		7D66C12F29434C5F00F49A23 /* addCookPage-model */ = {
+			isa = PBXGroup;
+			children = (
+				7DC1BDA729428D38004866AB /* AddCookView.swift */,
+			);
+			path = "addCookPage-model";
+			sourceTree = "<group>";
+		};
+		7D66C13029434F5800F49A23 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
 			sourceTree = "<group>";
 		};
 		7D80657A2934E8EC0023E60E /* cooks */ = {

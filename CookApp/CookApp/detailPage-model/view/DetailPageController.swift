@@ -7,13 +7,30 @@
 
 import UIKit
 
+class IngredientAdd {
+    var ingredients : [String]?
+    var header : String?
+    var labelColor:  UIColor?
+    var buttonHiddenState : Bool?
+    
+    init(ingredients: [String]?, header: String?,labelColor: UIColor?,buttonHiddenState: Bool?) {
+        self.ingredients = ingredients
+        self.header = header
+        self.labelColor = labelColor
+        self.buttonHiddenState = buttonHiddenState
+    }
+    
+}
+
 class DetailPageController: UIViewController {
  
     
     @IBOutlet weak var cookNameLabel: UILabel!
     @IBOutlet var detailView: UIView!
-    var ingredientsListTest = [String]()
-    var addedingredientsListTest = [String]()
+    var ingredientsListTest = [IngredientAdd]()
+    var getIngredientsListApi = [String]()
+    var addedIngredientsList = [String]()
+    
     
     @IBOutlet weak var ingredientTableView: UITableView!
     
@@ -24,13 +41,16 @@ class DetailPageController: UIViewController {
         ingredientTableView.register(UINib(nibName: "ATVC", bundle: nil), forCellReuseIdentifier: "atvc")
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
-        ingredientsListTest.append("A")
-        ingredientsListTest.append("B")
-        ingredientsListTest.append("C")
-        ingredientsListTest.append("D")
-        ingredientsListTest.append("E")
-        ingredientsListTest.append("F")
-        ingredientsListTest.append("G")
+        getIngredientsListApi.append("A")
+        getIngredientsListApi.append("B")
+        getIngredientsListApi.append("C")
+        getIngredientsListApi.append("D")
+        getIngredientsListApi.append("E")
+        getIngredientsListApi.append("F")
+        getIngredientsListApi.append("G")
+        ingredientsListTest.append(IngredientAdd.init(ingredients: getIngredientsListApi, header: "Ingredients",labelColor: UIColor.black,buttonHiddenState: false))
+        //ingredientsListTest.append(IngredientAdd.init(ingredients: addedIngredientsList, header: "Added Ingredients"))
+        
     
     }
     
@@ -54,49 +74,40 @@ class DetailPageController: UIViewController {
 
 extension DetailPageController : UITableViewDelegate, UITableViewDataSource,IngredientTVCProtocol {
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return ingredientsListTest.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ingredientsListTest[section].ingredients?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : IngredientTVC = ingredientTableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTVC
         cell.cellRow = indexPath.row
         cell.delegate = self
-        cell.ingredientLabel.text = self.ingredientsListTest[indexPath.row]
-        if addedingredientsListTest.contains(self.ingredientsListTest[indexPath.row]){
-            cell.addButton.isHidden = true
-            cell.ingredientLabel.textColor = UIColor.lightGray
-        }
+        cell.ingredientLabel?.text = ingredientsListTest[indexPath.section].ingredients?[indexPath.row]
+        cell.ingredientLabel.textColor = ingredientsListTest[indexPath.section].labelColor
+        cell.addButton.isHidden  = ingredientsListTest[indexPath.section].buttonHiddenState!
         return cell
         
     }
+    
+ 
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return ingredientsListTest[section].header
+    }
+    
     func addIngredient(row: Int) {
-        let added = self.ingredientsListTest[row]
-        self.ingredientsListTest.remove(at: row)
-        self.ingredientsListTest.append(added)
+        print("Button test")
+        let added = self.getIngredientsListApi[row]
+        self.getIngredientsListApi.remove(at: row)
+        self.addedIngredientsList.append(added)
+        self.ingredientsListTest.removeAll()
+        ingredientsListTest.append(IngredientAdd.init(ingredients: getIngredientsListApi, header: "Ingredients",labelColor: UIColor.black,buttonHiddenState: false))
+        ingredientsListTest.append(IngredientAdd.init(ingredients: addedIngredientsList, header: "Added Ingredients",labelColor: UIColor.lightGray,buttonHiddenState: true))
         self.ingredientTableView.reloadData()
-        self.addedingredientsListTest.append(added)
-    }
-    
-    
-    
-    
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let added = UIContextualAction(style: .normal, title: "Added") { action,view, comletionHandler in
-          
-            
-            
-            
-        }
-        
-        let configuraiton = UISwipeActionsConfiguration(actions: [added])
-        return configuraiton
-        
         
     }
-   
 }
 
 
