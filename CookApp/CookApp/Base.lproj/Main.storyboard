@@ -178,6 +178,9 @@
                                                 <rect key="frame" x="93.666666666666671" y="762" width="187.66666666666663" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Add Ingredients"/>
+                                                <connections>
+                                                    <action selector="addIngredientsSelected:" destination="ECg-ck-bJT" eventType="touchUpInside" id="sDr-t8-u9D"/>
+                                                </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-Wz-Ljm">
                                                 <rect key="frame" x="0.0" y="805" width="375" height="195"/>
@@ -257,7 +260,9 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="addedIngredientsTableView" destination="MNb-Wz-Ljm" id="BEe-vl-a2v"/>
+                        <outlet property="categoryPickerView" destination="bCX-bx-xdV" id="q4f-Q1-c6d"/>
                         <outlet property="cookImageView" destination="UEY-Tk-g0x" id="Vbc-BG-K7n"/>
+                        <outlet property="ingredientsTextField" destination="ZAL-Lg-fhl" id="ukK-3x-WhS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4w-Pk-5M0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
