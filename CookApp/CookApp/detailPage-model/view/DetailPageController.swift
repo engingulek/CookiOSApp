@@ -19,7 +19,6 @@ class IngredientAdd {
         self.labelColor = labelColor
         self.buttonHiddenState = buttonHiddenState
     }
-    
 }
 
 class DetailPageController: UIViewController {
@@ -27,12 +26,11 @@ class DetailPageController: UIViewController {
     
     @IBOutlet weak var cookNameLabel: UILabel!
     @IBOutlet var detailView: UIView!
+    @IBOutlet weak var ingredientTableView: UITableView!
     var ingredientsListTest = [IngredientAdd]()
     var getIngredientsListApi = [String]()
     var addedIngredientsList = [String]()
     
-    
-    @IBOutlet weak var ingredientTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,7 +96,6 @@ extension DetailPageController : UITableViewDelegate, UITableViewDataSource,Ingr
     }
     
     func addIngredient(row: Int) {
-        print("Button test")
         let added = self.getIngredientsListApi[row]
         self.getIngredientsListApi.remove(at: row)
         self.addedIngredientsList.append(added)

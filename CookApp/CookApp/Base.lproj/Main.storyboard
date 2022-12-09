@@ -257,6 +257,7 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="addedIngredientsTableView" destination="MNb-Wz-Ljm" id="BEe-vl-a2v"/>
+                        <outlet property="cookImageView" destination="UEY-Tk-g0x" id="Vbc-BG-K7n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4w-Pk-5M0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
