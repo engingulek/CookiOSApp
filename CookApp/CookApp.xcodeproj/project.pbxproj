@@ -33,6 +33,7 @@
 		7DC1BDA829428D38004866AB /* AddCookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1BDA729428D38004866AB /* AddCookView.swift */; };
 		7DC1F23529097243001CA5DE /* PageControllerCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1F23429097243001CA5DE /* PageControllerCVC.swift */; };
 		7DCD8A7A2909B8B9001964D4 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCD8A792909B8B9001964D4 /* HomePageVC.swift */; };
+		7DD592FD2943A1F200C1859F /* AddCook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD592FC2943A1F200C1859F /* AddCook.swift */; };
 		7DFBD9462916CB6300C73B8C /* IngredientTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBD9442916CB6300C73B8C /* IngredientTVC.swift */; };
 		7DFBD9472916CB6300C73B8C /* IngredientTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBD9452916CB6300C73B8C /* IngredientTVC.xib */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		7DC1BDA729428D38004866AB /* AddCookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookView.swift; sourceTree = "<group>"; };
 		7DC1F23429097243001CA5DE /* PageControllerCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllerCVC.swift; sourceTree = "<group>"; };
 		7DCD8A792909B8B9001964D4 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		7DD592FC2943A1F200C1859F /* AddCook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCook.swift; sourceTree = "<group>"; };
 		7DFBD9442916CB6300C73B8C /* IngredientTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTVC.swift; sourceTree = "<group>"; };
 		7DFBD9452916CB6300C73B8C /* IngredientTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,7 +250,8 @@
 		7D66C12F29434C5F00F49A23 /* addCookPage-model */ = {
 			isa = PBXGroup;
 			children = (
-				7DC1BDA729428D38004866AB /* AddCookView.swift */,
+				7DD592FB2943A1C800C1859F /* entity */,
+				7DD592FA2943A1BF00C1859F /* view */,
 			);
 			path = "addCookPage-model";
 			sourceTree = "<group>";
@@ -314,6 +317,22 @@
 				7DCD8A792909B8B9001964D4 /* HomePageVC.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		7DD592FA2943A1BF00C1859F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7DC1BDA729428D38004866AB /* AddCookView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7DD592FB2943A1C800C1859F /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				7DD592FC2943A1F200C1859F /* AddCook.swift */,
+			);
+			path = entity;
 			sourceTree = "<group>";
 		};
 		7DE14E64291036A200B3B896 /* cell */ = {
@@ -425,6 +444,7 @@
 				7D9FEBA4290AFC400034C650 /* TrendsCVC.swift in Sources */,
 				7D0BB10D290ED52800D1B6FC /* Cook.swift in Sources */,
 				7D209C2C2909571C009015DB /* AppDelegate.swift in Sources */,
+				7DD592FD2943A1F200C1859F /* AddCook.swift in Sources */,
 				7D0BB10F290ED69300D1B6FC /* Category.swift in Sources */,
 				7D209C2E2909571C009015DB /* SceneDelegate.swift in Sources */,
 				7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */,

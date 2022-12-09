@@ -255,13 +255,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Cook" id="XUs-yA-XXS">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="L3p-5p-dZ6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="L3p-5p-dZ6">
+                            <connections>
+                                <action selector="saveCookClicked:" destination="ECg-ck-bJT" id="YyM-kf-ERY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="addedIngredientsTableView" destination="MNb-Wz-Ljm" id="BEe-vl-a2v"/>
                         <outlet property="categoryPickerView" destination="bCX-bx-xdV" id="q4f-Q1-c6d"/>
+                        <outlet property="cookDetailTextField" destination="FXA-vh-mom" id="UPF-2a-HAY"/>
                         <outlet property="cookImageView" destination="UEY-Tk-g0x" id="Vbc-BG-K7n"/>
+                        <outlet property="cookMinuteTextField" destination="rs5-lC-T84" id="aJH-B1-YhZ"/>
+                        <outlet property="cookNameTextField" destination="sdP-vR-pbZ" id="kfb-Mh-b02"/>
                         <outlet property="ingredientsTextField" destination="ZAL-Lg-fhl" id="ukK-3x-WhS"/>
                     </connections>
                 </viewController>

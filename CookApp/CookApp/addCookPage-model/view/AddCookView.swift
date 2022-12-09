@@ -12,9 +12,14 @@ class AddCookView: UIViewController {
     @IBOutlet weak var cookImageView: UIImageView!
     @IBOutlet weak var categoryPickerView: UIPickerView!
     
+    @IBOutlet weak var cookNameTextField: UITextField!
+    @IBOutlet weak var cookDetailTextField: UITextView!
+    
+    @IBOutlet weak var cookMinuteTextField: UITextField!
     @IBOutlet weak var ingredientsTextField: UITextField!
     let cookImagePicker = UIImagePickerController()
-    let categorySourceTest = ["New","Soup","Meat","Dinner","Breakfeast","Lauch","Drink"]
+    let categorySourceTest = ["Other","Meat","Dinner","Breakfeast","Lauch","Drink","Soup"]
+    var selectedCategory:String?
     var ingredient:String?
     var addedIngredientsList = [String]()
     
@@ -28,16 +33,17 @@ class AddCookView: UIViewController {
         
         // Mark  - imageview click feature
         cookImageView.isUserInteractionEnabled = true
-        
+        cookImageView.restorationIdentifier = "addImage"
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(cookImageSelect))
         cookImageView.addGestureRecognizer(gestureRecognizer)
+        selectedCategory = categorySourceTest[0]
         
         
     }
     @objc func cookImageSelect(){
-        print("Image select")
         cookImagePicker.delegate = self
         cookImagePicker.sourceType = .photoLibrary
+        cookImageView.restorationIdentifier = "cookImage"
         self.present(cookImagePicker, animated: true)
     }
     
@@ -61,10 +67,31 @@ class AddCookView: UIViewController {
     }
     
     
+    @IBAction func saveCookClicked(_ sender: Any) {
+        
+        
+            if cookNameTextField.text == "" ||
+            cookDetailTextField.text == "" ||
+            cookMinuteTextField.text == "" ||
+            cookImageView.restorationIdentifier == "addImage" {
+            alertMessage(title: "Warning", message: "Please enter a empty")
+        }else{
+            if addedIngredientsList.count < 5 {
+                alertMessage(title: "Warning", message: "Ingredients count must least 5")
+            }else{
+                var newCook = AddCook(imageUrl: "url",
+                                      name: cookNameTextField.text!,
+                                      detail: cookDetailTextField.text!, category: selectedCategory,
+                                      minute: Int(cookMinuteTextField.text!), ingredients: addedIngredientsList)
+                print(newCook)
+            }
+           
+        }
+    }
     
 }
 
-// Mark - UITableView
+// MARK: - UITableView
 extension AddCookView: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addedIngredientsList.count
@@ -90,14 +117,14 @@ extension AddCookView: UITableViewDelegate,UITableViewDataSource {
     return configuraiton
     }
 }
-// Mark - UIImagePickerController
+// MARK: - UIImagePickerController
 extension AddCookView : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         cookImageView.image = info[.originalImage] as? UIImage
         self.dismiss(animated: true)
     }
 }
-// Mark - UIPickerView
+// MARK: - UIPickerView
 extension AddCookView : UIPickerViewDelegate,UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -112,7 +139,8 @@ extension AddCookView : UIPickerViewDelegate,UIPickerViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(categorySourceTest[indexPath.row])
+        selectedCategory = categorySourceTest[indexPath.row]
+        
     }
     
     
