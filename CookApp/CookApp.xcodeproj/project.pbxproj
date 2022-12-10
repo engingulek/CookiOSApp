@@ -19,6 +19,9 @@
 		7D209C332909571C009015DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D209C312909571C009015DB /* Main.storyboard */; };
 		7D209C352909571D009015DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D209C342909571D009015DB /* Assets.xcassets */; };
 		7D209C382909571D009015DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D209C362909571D009015DB /* LaunchScreen.storyboard */; };
+		7D2365A72944864200F0618B /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2365A62944864200F0618B /* SearchResultView.swift */; };
+		7D2365AB29448E2D00F0618B /* SearchCookResultTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2365A929448E2D00F0618B /* SearchCookResultTVC.swift */; };
+		7D2365AC29448E2D00F0618B /* SearchCookResultTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D2365AA29448E2D00F0618B /* SearchCookResultTVC.xib */; };
 		7D491255290FE43F00462C34 /* CookPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D491254290FE43F00462C34 /* CookPageController.swift */; };
 		7D491259290FEBB900462C34 /* DetailPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D491258290FEBB900462C34 /* DetailPageController.swift */; };
 		7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59E656290BFB6100129E67 /* CategoriesCVC.swift */; };
@@ -34,6 +37,7 @@
 		7DC1F23529097243001CA5DE /* PageControllerCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1F23429097243001CA5DE /* PageControllerCVC.swift */; };
 		7DCD8A7A2909B8B9001964D4 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCD8A792909B8B9001964D4 /* HomePageVC.swift */; };
 		7DD592FD2943A1F200C1859F /* AddCook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD592FC2943A1F200C1859F /* AddCook.swift */; };
+		7DD593032943B66000C1859F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD593022943B66000C1859F /* SearchViewController.swift */; };
 		7DFBD9462916CB6300C73B8C /* IngredientTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBD9442916CB6300C73B8C /* IngredientTVC.swift */; };
 		7DFBD9472916CB6300C73B8C /* IngredientTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBD9452916CB6300C73B8C /* IngredientTVC.xib */; };
 /* End PBXBuildFile section */
@@ -53,6 +57,9 @@
 		7D209C342909571D009015DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D209C372909571D009015DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D209C392909571D009015DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D2365A62944864200F0618B /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		7D2365A929448E2D00F0618B /* SearchCookResultTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCookResultTVC.swift; sourceTree = "<group>"; };
+		7D2365AA29448E2D00F0618B /* SearchCookResultTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCookResultTVC.xib; sourceTree = "<group>"; };
 		7D491254290FE43F00462C34 /* CookPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPageController.swift; sourceTree = "<group>"; };
 		7D491258290FEBB900462C34 /* DetailPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageController.swift; sourceTree = "<group>"; };
 		7D59E656290BFB6100129E67 /* CategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCVC.swift; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 		7DC1F23429097243001CA5DE /* PageControllerCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllerCVC.swift; sourceTree = "<group>"; };
 		7DCD8A792909B8B9001964D4 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		7DD592FC2943A1F200C1859F /* AddCook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCook.swift; sourceTree = "<group>"; };
+		7DD593022943B66000C1859F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7DFBD9442916CB6300C73B8C /* IngredientTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTVC.swift; sourceTree = "<group>"; };
 		7DFBD9452916CB6300C73B8C /* IngredientTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +160,8 @@
 		7D209C2A2909571C009015DB /* CookApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D2365A42944861800F0618B /* searchResultPage-model */,
+				7DD593002943B64000C1859F /* searchPage-model */,
 				7D66C12F29434C5F00F49A23 /* addCookPage-model */,
 				7D491256290FEB2B00462C34 /* detailPage-model */,
 				7D59E65A290C55FD00129E67 /* cookPage-model */,
@@ -174,6 +184,31 @@
 				7D8475CC2909617D000D6EA1 /* view */,
 			);
 			path = "pageController-model";
+			sourceTree = "<group>";
+		};
+		7D2365A42944861800F0618B /* searchResultPage-model */ = {
+			isa = PBXGroup;
+			children = (
+				7D2365A52944862B00F0618B /* view */,
+			);
+			path = "searchResultPage-model";
+			sourceTree = "<group>";
+		};
+		7D2365A52944862B00F0618B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7D2365A62944864200F0618B /* SearchResultView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7D2365A829448DFE00F0618B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				7D2365A929448E2D00F0618B /* SearchCookResultTVC.swift */,
+				7D2365AA29448E2D00F0618B /* SearchCookResultTVC.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		7D491256290FEB2B00462C34 /* detailPage-model */ = {
@@ -335,6 +370,23 @@
 			path = entity;
 			sourceTree = "<group>";
 		};
+		7DD593002943B64000C1859F /* searchPage-model */ = {
+			isa = PBXGroup;
+			children = (
+				7DD593012943B64D00C1859F /* view */,
+			);
+			path = "searchPage-model";
+			sourceTree = "<group>";
+		};
+		7DD593012943B64D00C1859F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7D2365A829448DFE00F0618B /* cell */,
+				7DD593022943B66000C1859F /* SearchViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		7DE14E64291036A200B3B896 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2365AC29448E2D00F0618B /* SearchCookResultTVC.xib in Resources */,
 				7DFBD9472916CB6300C73B8C /* IngredientTVC.xib in Resources */,
 				7D209C382909571D009015DB /* LaunchScreen.storyboard in Resources */,
 				7D209C352909571D009015DB /* Assets.xcassets in Resources */,
@@ -436,10 +489,13 @@
 				7D0BB101290EB85C00D1B6FC /* HomePagePresenter.swift in Sources */,
 				7D8065812934E9400023E60E /* CookTVC.swift in Sources */,
 				7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */,
+				7D2365A72944864200F0618B /* SearchResultView.swift in Sources */,
 				7D0BB10B290EBF3E00D1B6FC /* HomePageRouter.swift in Sources */,
+				7D2365AB29448E2D00F0618B /* SearchCookResultTVC.swift in Sources */,
 				7D209C302909571C009015DB /* PageController.swift in Sources */,
 				7DC1F23529097243001CA5DE /* PageControllerCVC.swift in Sources */,
 				7D59E660290C576900129E67 /* newCookCVC.swift in Sources */,
+				7DD593032943B66000C1859F /* SearchViewController.swift in Sources */,
 				7DCD8A7A2909B8B9001964D4 /* HomePageVC.swift in Sources */,
 				7D9FEBA4290AFC400034C650 /* TrendsCVC.swift in Sources */,
 				7D0BB10D290ED52800D1B6FC /* Cook.swift in Sources */,
@@ -598,6 +654,7 @@
 				DEVELOPMENT_TEAM = 34G99QRS57;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CookApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -626,6 +683,7 @@
 				DEVELOPMENT_TEAM = 34G99QRS57;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CookApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

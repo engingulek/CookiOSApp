@@ -8,7 +8,7 @@
 import UIKit
 
 class HomePageVC: UIViewController{
-    @IBOutlet weak var homePageSearchBar: UISearchBar!
+   
     @IBOutlet weak var viewToSearchBar: UIView!
     @IBOutlet weak var trendsCookCollectionView: UICollectionView!
     @IBOutlet weak var cookCollectionView: UICollectionView!
@@ -18,9 +18,8 @@ class HomePageVC: UIViewController{
         super.viewDidLoad()
         
         HomePageRouter.createView(view: self)
-        homePageSearchBar.delegate = self
-        homePageSearchBar.searchTextField.layer.backgroundColor = UIColor.white.cgColor
-        homePageSearchBar.searchTextField.layer.cornerRadius = 15
+       
+    
         trendsCookCollectionView.delegate = self
         trendsCookCollectionView.dataSource = self
         trendsCookCollectionView.register(UINib(nibName: "TrendsCVC", bundle: nil),forCellWithReuseIdentifier: "cookCell")
@@ -42,7 +41,7 @@ class HomePageVC: UIViewController{
         
         
         self.viewToSearchBar.backgroundColor = UIColor.init(named: "searchBarViewColor")
-        homePageSearchBar.barTintColor  = UIColor.init(named: "searchBarViewColor")
+       
         let designTCV : UICollectionViewFlowLayout  = UICollectionViewFlowLayout()
         let widthTCV  = self.trendsCookCollectionView.layer.frame.size.width
         let heightTCV  = self.trendsCookCollectionView.layer.frame.size.height
@@ -126,6 +125,4 @@ extension HomePageVC : UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 
-extension HomePageVC : UISearchBarDelegate {
-    
-}
+
