@@ -92,7 +92,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJ6-sK-Yxz">
                                 <rect key="frame" x="20" y="676.66666666666663" width="335" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Get Started">
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Google">
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65" y="7"/>
+            <point key="canvasLocation" x="28" y="-32"/>
         </scene>
         <!--Add Cook-->
         <scene sceneID="rMd-Lh-QQY">
@@ -274,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4w-Pk-5M0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063" y="1298"/>
+            <point key="canvasLocation" x="1271" y="1558"/>
         </scene>
         <!--Home PageVC-->
         <scene sceneID="Q8w-f8-P5C">
@@ -531,7 +531,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G11-qo-uEN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2407" y="-325"/>
+            <point key="canvasLocation" x="3502" y="-325"/>
         </scene>
         <!--Search Result View-->
         <scene sceneID="409-qA-5ak">
@@ -547,7 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXC-c4-wjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3300" y="-325"/>
+            <point key="canvasLocation" x="4740" y="-325"/>
         </scene>
         <!--Cook Page Controller-->
         <scene sceneID="vNl-jP-QSu">
@@ -612,6 +612,7 @@
                         <segue destination="NSo-4n-vf6" kind="relationship" relationship="viewControllers" id="sra-Pv-scY"/>
                         <segue destination="ScS-tH-AY1" kind="relationship" relationship="viewControllers" id="fCz-gg-n45"/>
                         <segue destination="ioY-1r-tCG" kind="relationship" relationship="viewControllers" id="8ZJ-t4-XRO"/>
+                        <segue destination="be3-vI-Qol" kind="relationship" relationship="viewControllers" id="tF3-Z8-0jb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCd-QX-WcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -648,7 +649,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qP-2h-EQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3380" y="428.57142857142861"/>
+            <point key="canvasLocation" x="4740" y="412"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EBW-0w-de9">
@@ -690,7 +691,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYZ-fA-fKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="1230"/>
+            <point key="canvasLocation" x="1268" y="822"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7OB-86-6d9">
@@ -709,17 +710,141 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMm-gY-Nc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2437.5999999999999" y="428.57142857142861"/>
+            <point key="canvasLocation" x="3502" y="412"/>
+        </scene>
+        <!--My Account-->
+        <scene sceneID="ser-n6-LHd">
+            <objects>
+                <viewController id="Cqi-x2-r6y" customClass="MyAccountView" customModule="CookApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4F-Qt-Vl9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JV6-W5-T1g">
+                                <rect key="frame" x="0.0" y="91" width="375" height="203"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chef" translatesAutoresizingMaskIntoConstraints="NO" id="xa8-Cu-sF1">
+                                        <rect key="frame" x="131.33333333333334" y="8" width="112.33333333333334" height="101.66666666666667"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Cooks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaB-bw-yuV">
+                                        <rect key="frame" x="158" y="129.66666666666666" width="59.333333333333343" height="28.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrF-bB-5rW">
+                                        <rect key="frame" x="175.66666666666666" y="160" width="24" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="searchBarViewColor"/>
+                                <constraints>
+                                    <constraint firstItem="xa8-Cu-sF1" firstAttribute="width" secondItem="JV6-W5-T1g" secondAttribute="width" multiplier="0.3" id="78p-Cr-Bj8"/>
+                                    <constraint firstItem="IaB-bw-yuV" firstAttribute="top" secondItem="xa8-Cu-sF1" secondAttribute="bottom" constant="20" id="F41-aa-ANh"/>
+                                    <constraint firstItem="IaB-bw-yuV" firstAttribute="centerX" secondItem="JV6-W5-T1g" secondAttribute="centerX" id="LCd-iV-iGZ"/>
+                                    <constraint firstItem="xa8-Cu-sF1" firstAttribute="height" secondItem="JV6-W5-T1g" secondAttribute="height" multiplier="0.5" id="LbL-rs-j17"/>
+                                    <constraint firstAttribute="bottom" secondItem="FrF-bB-5rW" secondAttribute="bottom" constant="19" id="N98-hN-rPJ"/>
+                                    <constraint firstItem="FrF-bB-5rW" firstAttribute="top" secondItem="IaB-bw-yuV" secondAttribute="bottom" constant="2" id="UL9-aa-p0B"/>
+                                    <constraint firstItem="xa8-Cu-sF1" firstAttribute="top" secondItem="JV6-W5-T1g" secondAttribute="top" constant="8" id="dYG-tA-0zx"/>
+                                    <constraint firstItem="xa8-Cu-sF1" firstAttribute="centerX" secondItem="JV6-W5-T1g" secondAttribute="centerX" id="uLt-xR-Mu0"/>
+                                    <constraint firstItem="FrF-bB-5rW" firstAttribute="centerX" secondItem="JV6-W5-T1g" secondAttribute="centerX" id="ysl-fE-UdT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qV-cg-pny">
+                                <rect key="frame" x="56.333333333333343" y="404" width="262.33333333333326" height="35"/>
+                                <color key="backgroundColor" name="searchBarViewColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Cooks" cornerStyle="fixed"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8g-2m-3Cd">
+                                <rect key="frame" x="56.333333333333343" y="459" width="262.33333333333326" height="35"/>
+                                <color key="backgroundColor" name="searchBarViewColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Likes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-K0-ZzH">
+                                <rect key="frame" x="56.333333333333343" y="674" width="262.33333333333326" height="35"/>
+                                <color key="backgroundColor" name="searchBarViewColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sign Out"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pxe-YW-SLf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hbt-K0-ZzH" firstAttribute="width" secondItem="M4F-Qt-Vl9" secondAttribute="width" multiplier="0.7" id="3pH-wJ-lGY"/>
+                            <constraint firstItem="JV6-W5-T1g" firstAttribute="trailing" secondItem="Pxe-YW-SLf" secondAttribute="trailing" id="83U-2k-9bk"/>
+                            <constraint firstItem="I8g-2m-3Cd" firstAttribute="top" secondItem="6qV-cg-pny" secondAttribute="bottom" constant="20" id="G4X-Lo-B9O"/>
+                            <constraint firstItem="Pxe-YW-SLf" firstAttribute="bottom" secondItem="Hbt-K0-ZzH" secondAttribute="bottom" constant="20" id="YQu-l6-kvu"/>
+                            <constraint firstItem="JV6-W5-T1g" firstAttribute="width" secondItem="M4F-Qt-Vl9" secondAttribute="width" id="Zwu-w7-bMd"/>
+                            <constraint firstItem="I8g-2m-3Cd" firstAttribute="centerX" secondItem="M4F-Qt-Vl9" secondAttribute="centerX" id="bHW-jE-212"/>
+                            <constraint firstItem="JV6-W5-T1g" firstAttribute="height" secondItem="M4F-Qt-Vl9" secondAttribute="height" multiplier="0.25" id="cT7-rW-kRE"/>
+                            <constraint firstItem="Hbt-K0-ZzH" firstAttribute="centerX" secondItem="M4F-Qt-Vl9" secondAttribute="centerX" id="cbW-tl-RAU"/>
+                            <constraint firstItem="I8g-2m-3Cd" firstAttribute="width" secondItem="M4F-Qt-Vl9" secondAttribute="width" multiplier="0.7" id="dqV-tt-qgs"/>
+                            <constraint firstItem="JV6-W5-T1g" firstAttribute="leading" secondItem="Pxe-YW-SLf" secondAttribute="leading" id="eod-e1-kir"/>
+                            <constraint firstItem="6qV-cg-pny" firstAttribute="width" secondItem="M4F-Qt-Vl9" secondAttribute="width" multiplier="0.7" id="fsP-Dc-caq"/>
+                            <constraint firstItem="JV6-W5-T1g" firstAttribute="top" secondItem="Pxe-YW-SLf" secondAttribute="top" id="hWd-PN-DPr"/>
+                            <constraint firstItem="6qV-cg-pny" firstAttribute="centerX" secondItem="M4F-Qt-Vl9" secondAttribute="centerX" id="hbK-EU-gkg"/>
+                            <constraint firstItem="6qV-cg-pny" firstAttribute="top" secondItem="JV6-W5-T1g" secondAttribute="bottom" constant="110" id="mCc-qZ-OLP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Account" id="Cu1-5Z-tTm"/>
+                    <connections>
+                        <outlet property="accountView" destination="JV6-W5-T1g" id="HoI-gi-y9c"/>
+                        <outlet property="cooksButton" destination="6qV-cg-pny" id="bcA-oS-jxS"/>
+                        <outlet property="likesButton" destination="I8g-2m-3Cd" id="ea7-Ap-0XE"/>
+                        <outlet property="profilImageView" destination="xa8-Cu-sF1" id="shJ-dm-X0D"/>
+                        <outlet property="signOutButton" destination="Hbt-K0-ZzH" id="Cea-I2-EEk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dYD-FK-Weq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4444" y="1225.8620689655172"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PpR-fl-tmN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="be3-vI-Qol" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="ojg-hh-dam"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vtq-rz-mUz">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cqi-x2-r6y" kind="relationship" relationship="rootViewController" id="gUp-Ik-pwO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRE-sN-BDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3501.5999999999999" y="1226.6009852216748"/>
         </scene>
     </scenes>
     <resources>
         <image name="addImage" width="170.66667175292969" height="170.66667175292969"/>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
+        <image name="chef" width="512" height="512"/>
         <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="cooking" width="512" height="512"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="imageFoodTest" width="1210" height="680"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="AccentColor">
