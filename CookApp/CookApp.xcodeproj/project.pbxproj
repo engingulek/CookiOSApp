@@ -31,6 +31,7 @@
 		7D8065812934E9400023E60E /* CookTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80657F2934E9400023E60E /* CookTVC.swift */; };
 		7D8065822934E9400023E60E /* CookTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8065802934E9400023E60E /* CookTVC.xib */; };
 		7D8475CF290961B5000D6EA1 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8475CE290961B5000D6EA1 /* Slide.swift */; };
+		7D8D12612944A8AF00E7C882 /* NoticationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12602944A8AF00E7C882 /* NoticationsView.swift */; };
 		7D9FEBA4290AFC400034C650 /* TrendsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */; };
 		7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */; };
 		7DC1BDA829428D38004866AB /* AddCookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1BDA729428D38004866AB /* AddCookView.swift */; };
@@ -69,6 +70,7 @@
 		7D80657F2934E9400023E60E /* CookTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTVC.swift; sourceTree = "<group>"; };
 		7D8065802934E9400023E60E /* CookTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CookTVC.xib; sourceTree = "<group>"; };
 		7D8475CE290961B5000D6EA1 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		7D8D12602944A8AF00E7C882 /* NoticationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticationsView.swift; sourceTree = "<group>"; };
 		7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsCVC.swift; sourceTree = "<group>"; };
 		7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsCVC.xib; sourceTree = "<group>"; };
 		7DC1BDA729428D38004866AB /* AddCookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		7D209C2A2909571C009015DB /* CookApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D8D125C2944A7CE00E7C882 /* notificationsPage-model */,
 				7D2365A42944861800F0618B /* searchResultPage-model */,
 				7DD593002943B64000C1859F /* searchPage-model */,
 				7D66C12F29434C5F00F49A23 /* addCookPage-model */,
@@ -322,6 +325,22 @@
 				7D8475CE290961B5000D6EA1 /* Slide.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		7D8D125C2944A7CE00E7C882 /* notificationsPage-model */ = {
+			isa = PBXGroup;
+			children = (
+				7D8D125D2944A7E100E7C882 /* view */,
+			);
+			path = "notificationsPage-model";
+			sourceTree = "<group>";
+		};
+		7D8D125D2944A7E100E7C882 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7D8D12602944A8AF00E7C882 /* NoticationsView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		7DC1F2332909722D001CA5DE /* cell */ = {
@@ -492,6 +511,7 @@
 				7D2365A72944864200F0618B /* SearchResultView.swift in Sources */,
 				7D0BB10B290EBF3E00D1B6FC /* HomePageRouter.swift in Sources */,
 				7D2365AB29448E2D00F0618B /* SearchCookResultTVC.swift in Sources */,
+				7D8D12612944A8AF00E7C882 /* NoticationsView.swift in Sources */,
 				7D209C302909571C009015DB /* PageController.swift in Sources */,
 				7DC1F23529097243001CA5DE /* PageControllerCVC.swift in Sources */,
 				7D59E660290C576900129E67 /* newCookCVC.swift in Sources */,
