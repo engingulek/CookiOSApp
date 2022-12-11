@@ -41,6 +41,9 @@
 		7DCC48352945EEFB000BF48D /* CookPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC48342945EEFB000BF48D /* CookPagePresenter.swift */; };
 		7DCC48372945F20C000BF48D /* CookPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC48362945F20C000BF48D /* CookPageInteractor.swift */; };
 		7DCC48392945F441000BF48D /* CookPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC48382945F441000BF48D /* CookPageRouter.swift */; };
+		7DCC483C2946129C000BF48D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7DCC483B2946129C000BF48D /* Alamofire */; };
+		7DCC483F294612C5000BF48D /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC483E294612C5000BF48D /* APICaller.swift */; };
+		7DCC4841294616BB000BF48D /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC4840294616BB000BF48D /* DataResult.swift */; };
 		7DCD8A7A2909B8B9001964D4 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCD8A792909B8B9001964D4 /* HomePageVC.swift */; };
 		7DD592FD2943A1F200C1859F /* AddCook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD592FC2943A1F200C1859F /* AddCook.swift */; };
 		7DD593032943B66000C1859F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD593022943B66000C1859F /* SearchViewController.swift */; };
@@ -85,6 +88,8 @@
 		7DCC48342945EEFB000BF48D /* CookPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPagePresenter.swift; sourceTree = "<group>"; };
 		7DCC48362945F20C000BF48D /* CookPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPageInteractor.swift; sourceTree = "<group>"; };
 		7DCC48382945F441000BF48D /* CookPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPageRouter.swift; sourceTree = "<group>"; };
+		7DCC483E294612C5000BF48D /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		7DCC4840294616BB000BF48D /* DataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
 		7DCD8A792909B8B9001964D4 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		7DD592FC2943A1F200C1859F /* AddCook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCook.swift; sourceTree = "<group>"; };
 		7DD593022943B66000C1859F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC483C2946129C000BF48D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +423,7 @@
 		7DCC48302945EAB3000BF48D /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				7DCC483D294612A5000BF48D /* APICaller */,
 				7DCC48332945EBFD000BF48D /* Entity */,
 			);
 			path = Manager;
@@ -426,8 +433,17 @@
 			isa = PBXGroup;
 			children = (
 				7DCC48312945EAC5000BF48D /* Category.swift */,
+				7DCC4840294616BB000BF48D /* DataResult.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		7DCC483D294612A5000BF48D /* APICaller */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC483E294612C5000BF48D /* APICaller.swift */,
+			);
+			path = APICaller;
 			sourceTree = "<group>";
 		};
 		7DCD8A752909B7F0001964D4 /* homePage-model */ = {
@@ -518,6 +534,9 @@
 			dependencies = (
 			);
 			name = CookApp;
+			packageProductDependencies = (
+				7DCC483B2946129C000BF48D /* Alamofire */,
+			);
 			productName = CookApp;
 			productReference = 7D209C282909571C009015DB /* CookApp.app */;
 			productType = "com.apple.product-type.application";
@@ -546,6 +565,9 @@
 				Base,
 			);
 			mainGroup = 7D209C1F2909571C009015DB;
+			packageReferences = (
+				7DCC483A2946129C000BF48D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 7D209C292909571C009015DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -583,6 +605,7 @@
 				7D491255290FE43F00462C34 /* CookPageController.swift in Sources */,
 				7D0BB108290EBBD900D1B6FC /* HomePageInteractor.swift in Sources */,
 				7DFBD9462916CB6300C73B8C /* IngredientTVC.swift in Sources */,
+				7DCC4841294616BB000BF48D /* DataResult.swift in Sources */,
 				7D491259290FEBB900462C34 /* DetailPageController.swift in Sources */,
 				7D0BB101290EB85C00D1B6FC /* HomePagePresenter.swift in Sources */,
 				7D8065812934E9400023E60E /* CookTVC.swift in Sources */,
@@ -605,6 +628,7 @@
 				7D0BB10D290ED52800D1B6FC /* Cook.swift in Sources */,
 				7D209C2C2909571C009015DB /* AppDelegate.swift in Sources */,
 				7DD592FD2943A1F200C1859F /* AddCook.swift in Sources */,
+				7DCC483F294612C5000BF48D /* APICaller.swift in Sources */,
 				7D209C2E2909571C009015DB /* SceneDelegate.swift in Sources */,
 				7DCC48322945EAC5000BF48D /* Category.swift in Sources */,
 				7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */,
@@ -828,6 +852,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7DCC483A2946129C000BF48D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7DCC483B2946129C000BF48D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DCC483A2946129C000BF48D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D209C202909571C009015DB /* Project object */;
 }

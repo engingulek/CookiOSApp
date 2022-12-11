@@ -7,6 +7,6 @@
 
 import Foundation
 struct Category : Codable {
-    var categoryId:String?
+    var _id:String?
     var categoryName:String?
 }

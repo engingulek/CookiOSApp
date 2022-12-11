@@ -30,3 +30,4 @@ protocol PresenterToViewCookPageProtol{
 protocol PresenterToRouterCookPageProtocol{
     static func createModel(ref:CookPageController)
 }
+

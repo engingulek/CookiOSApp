@@ -11,8 +11,17 @@ class CookPageInteractor : PresenterToInteractorCookPageProtocol {
     var cookPagePresenter: InteractorToPresenterCookPageProtocol?
     
     func getCategories() {
-        var testList = [Category]()
-        cookPagePresenter?.toPresenter(categoryList: testList)
+        APICaller.shared.fetchData(router: Constant.getCategoryRouter) { (response:Result<[Category]?,Error>) in
+            switch response {
+            case .success(let list):
+                self.cookPagePresenter?.toPresenter(categoryList: list!)
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+       
+        
     }
     
     

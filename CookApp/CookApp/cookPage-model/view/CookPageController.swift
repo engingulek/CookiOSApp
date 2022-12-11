@@ -56,6 +56,10 @@ class CookPageController : UIViewController {
 extension CookPageController:PresenterToViewCookPageProtol{
     func toView(categoryList: Array<Category>) {
         self.categories = categoryList
+        DispatchQueue.main.async {
+            self.cookCategoriesCollectionView.reloadData()
+        }
+        
         
     }
 }
@@ -66,17 +70,16 @@ extension CookPageController:PresenterToViewCookPageProtol{
 /// Categories
 extension CookPageController : UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : CategoriesCVC = cookCategoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoriesCVC
        // let widthCVC = self.cookCategoriesCollectionView.layer.frame.size.width
         cell.layer.cornerRadius = 20
+        cell.categoryLabel.text = self.categories[indexPath.row].categoryName
         cell.layer.backgroundColor = UIColor.red.cgColor
         cell.categoryLabel.textColor = UIColor.white
-        
-        
         return cell
     }
     
