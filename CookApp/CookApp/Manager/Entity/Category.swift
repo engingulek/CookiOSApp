@@ -2,13 +2,11 @@
 //  Category.swift
 //  CookApp
 //
-//  Created by engin gülek on 30.10.2022.
+//  Created by engin gülek on 11.12.2022.
 //
 
 import Foundation
-
-struct Category {
+struct Category : Codable {
     var categoryId:String?
-    var categoryImage:String?
     var categoryName:String?
 }

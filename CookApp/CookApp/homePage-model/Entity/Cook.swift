@@ -10,7 +10,7 @@ import Foundation
 struct Cook {
     var imageURL:String?
     var name:String?
-    var categoryName:Category?
+    var category:Category?
     var rating:String?
     var minute:String?
     var ingredients : [String]?

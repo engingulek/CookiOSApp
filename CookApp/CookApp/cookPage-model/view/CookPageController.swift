@@ -12,7 +12,10 @@ class CookPageController : UIViewController {
     @IBOutlet weak var cookCategoriesCollectionView: UICollectionView!
     
     @IBOutlet weak var cooksTableView: UITableView!
+    var cookPageObject : ViewToPresenterCookPageProtocol?
+    var categories = [Category]()
     override func viewDidLoad() {
+        CookPageRouter.createModel(ref: self)
         self.tabBarController?.tabBar.isHidden = true
         
         /// cookCategoriesCV connect cell and delegate dataSource
@@ -25,6 +28,8 @@ class CookPageController : UIViewController {
         cooksTableView.delegate = self
         cooksTableView.dataSource = self
         setupUI()
+        
+        cookPageObject?.getCategoriesAction()
     }
     
     private func setupUI(){
@@ -44,6 +49,17 @@ class CookPageController : UIViewController {
         
     }
 }
+
+// MARK: - VIPER->Protocols
+
+/// Presenter to view protocol
+extension CookPageController:PresenterToViewCookPageProtol{
+    func toView(categoryList: Array<Category>) {
+        self.categories = categoryList
+        
+    }
+}
+
 
 //Mark: -Delegate and Datasource
 
@@ -72,7 +88,6 @@ extension CookPageController : UITableViewDelegate,UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : CookTVC = cooksTableView.dequeueReusableCell(withIdentifier: "cookCell",for:indexPath)
         as! CookTVC
@@ -80,11 +95,4 @@ extension CookPageController : UITableViewDelegate,UITableViewDataSource  {
         self.cooksTableView.rowHeight = height/5
         return cell
     }
-    
-    
-    
-
-    
-    
-    
 }
