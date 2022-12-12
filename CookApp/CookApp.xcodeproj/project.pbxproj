@@ -28,6 +28,7 @@
 		7D59E660290C576900129E67 /* newCookCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59E65E290C576900129E67 /* newCookCVC.swift */; };
 		7D59E661290C576900129E67 /* newCookCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D59E65F290C576900129E67 /* newCookCVC.xib */; };
 		7D6376D9294734E8006A8E89 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7D6376D8294734E8006A8E89 /* Kingfisher */; };
+		7D6376DB29474A4F006A8E89 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6376DA29474A4F006A8E89 /* StepsView.swift */; };
 		7D8065812934E9400023E60E /* CookTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80657F2934E9400023E60E /* CookTVC.swift */; };
 		7D8065822934E9400023E60E /* CookTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8065802934E9400023E60E /* CookTVC.xib */; };
 		7D8475CF290961B5000D6EA1 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8475CE290961B5000D6EA1 /* Slide.swift */; };
@@ -75,6 +76,7 @@
 		7D59E657290BFB6100129E67 /* CategoriesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCVC.xib; sourceTree = "<group>"; };
 		7D59E65E290C576900129E67 /* newCookCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newCookCVC.swift; sourceTree = "<group>"; };
 		7D59E65F290C576900129E67 /* newCookCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newCookCVC.xib; sourceTree = "<group>"; };
+		7D6376DA29474A4F006A8E89 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
 		7D80657F2934E9400023E60E /* CookTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTVC.swift; sourceTree = "<group>"; };
 		7D8065802934E9400023E60E /* CookTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CookTVC.xib; sourceTree = "<group>"; };
 		7D8475CE290961B5000D6EA1 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				7DE14E64291036A200B3B896 /* cell */,
 				7D491258290FEBB900462C34 /* DetailPageController.swift */,
+				7D6376DA29474A4F006A8E89 /* StepsView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				7D491259290FEBB900462C34 /* DetailPageController.swift in Sources */,
 				7D0BB101290EB85C00D1B6FC /* HomePagePresenter.swift in Sources */,
 				7D8065812934E9400023E60E /* CookTVC.swift in Sources */,
+				7D6376DB29474A4F006A8E89 /* StepsView.swift in Sources */,
 				7DCC48352945EEFB000BF48D /* CookPagePresenter.swift in Sources */,
 				7D59E658290BFB6100129E67 /* CategoriesCVC.swift in Sources */,
 				7DCC482C2945E7C8000BF48D /* CookPageProtocol.swift in Sources */,

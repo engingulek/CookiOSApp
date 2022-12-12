@@ -29,6 +29,8 @@ class DetailPageController: UIViewController {
     
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var cookNameLabel: UILabel!
+    
+    @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet var detailView: UIView!
     @IBOutlet weak var ingredientTableView: UITableView!
     var ingredientsListTest = [IngredientAdd]()
@@ -51,6 +53,7 @@ class DetailPageController: UIViewController {
         cookNameLabel.text = cook?.name
         let url = URL(string: (cook?.imageURL!)!)
         cookImage.kf.setImage(with: url)
+        categoryNameLabel.text = cook?.category?.categoryName
         if let rating = cook?.rating,let minute = cook?.minute  {
             ratingLabel.text = "\(rating)"
             minuteLabel.text = "\(minute)"
@@ -58,10 +61,10 @@ class DetailPageController: UIViewController {
         }
         
         ingredientsListTest.append(IngredientAdd.init(ingredients: getIngredientsListApi, header: "Ingredients",labelColor: UIColor.black,buttonHiddenState: false))
-      
-        
-    
     }
+    
+    
+    
     
    private func detailViewDesign(){
         self.tabBarController?.tabBar.isHidden = true
@@ -79,6 +82,19 @@ class DetailPageController: UIViewController {
        let cellHeight = ingredientTableView.layer.frame.size.height / 7
        ingredientTableView.rowHeight = cellHeight
     }
+    
+    @IBAction func toStepsViewAciton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let toSteps = storyboard.instantiateViewController(withIdentifier: "stepsView") as! StepsView
+        if let steps = cook?.detail {
+            toSteps.steps = steps
+        }
+        self.present(toSteps, animated: true)
+
+        
+    }
+    
 }
 
 extension DetailPageController : UITableViewDelegate, UITableViewDataSource,IngredientTVCProtocol {

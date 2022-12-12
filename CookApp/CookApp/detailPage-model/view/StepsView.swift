@@ -8,22 +8,37 @@
 import UIKit
 
 class StepsView: UIViewController {
-
+    @IBOutlet weak var stepsTableViewController: UITableView!
+    var steps = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        stepsTableViewController.delegate = self
+        stepsTableViewController.dataSource = self
+        print("Denme \(steps)")
+        
+    }
 
-        // Do any additional setup after loading the view.
+}
+
+extension StepsView:UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return steps.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = stepsTableViewController.dequeueReusableCell(withIdentifier: "stepCell", for: indexPath)
+        let step = "\(indexPath.row + 1):  \(steps[indexPath.row])"
+        cell.textLabel?.text = step
+        cell.textLabel?.numberOfLines = 3
+        return cell
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Steps"
+    }
+    
+    
+    
+    
 }

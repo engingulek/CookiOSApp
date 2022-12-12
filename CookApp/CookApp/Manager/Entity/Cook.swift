@@ -11,7 +11,7 @@ struct Cook:Codable {
     var imageURL:String?
     var name:String?
     var category:Category?
-    var detail:String?
+    var detail:[String]?
     var rating:Double?
     var minute:Int?
     var ingredients : [String]?
