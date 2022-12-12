@@ -16,7 +16,11 @@ protocol ViewToPresenterCookPageProtocol {
     func getCategoriesAction()
     
     /// Cook data action
-    func getCooksAction()
+     func getCooksAction()
+    func getCooksAction(categoryId:String)
+    
+ 
+   
 
 }
 
@@ -29,9 +33,13 @@ protocol PresenterToInteractorCookPageProtocol{
     
     /// Cook fetch data
     func getCooks()
+    
+    
 }
 
 protocol InteractorToPresenterCookPageProtocol{
+
+
     // MARK: toPresenter
     
     /// toPresenter categories
@@ -39,6 +47,9 @@ protocol InteractorToPresenterCookPageProtocol{
     
     /// toPresenter cooks
     func toPresenterCooks(cookList:Array<Cook>)
+    
+   
+   
 }
 
 protocol PresenterToViewCookPageProtol{
@@ -50,6 +61,10 @@ protocol PresenterToViewCookPageProtol{
     
     /// toView Cooks
      func toViewCooks(cookList:Array<Cook>)
+    
+    
+    
+    
 }
 
 protocol PresenterToRouterCookPageProtocol{

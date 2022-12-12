@@ -27,9 +27,9 @@ class CookPageInteractor : PresenterToInteractorCookPageProtocol {
             switch response {
             case .success(let list):
                 self.cookPagePresenter?.toPresenterCooks(cookList: list!)
+                
             case .failure(let error):
                 print(error)
-                
             }
         }
     }

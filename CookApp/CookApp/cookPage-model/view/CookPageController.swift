@@ -15,6 +15,7 @@ class CookPageController : UIViewController {
     var cookPageObject : ViewToPresenterCookPageProtocol?
     var categories = [Category]()
     var cooks = [Cook]()
+    var lastIndexSelection:IndexPath = [1,0]
     override func viewDidLoad() {
         CookPageRouter.createModel(ref: self)
         self.tabBarController?.tabBar.isHidden = true
@@ -32,6 +33,11 @@ class CookPageController : UIViewController {
         
         cookPageObject?.getCategoriesAction()
         cookPageObject?.getCooksAction()
+        self.lastIndexSelection = [0,0]
+       
+        
+        
+        
     }
     
     private func setupUI(){
@@ -55,6 +61,8 @@ class CookPageController : UIViewController {
 
 /// Presenter to view protocol
 extension CookPageController:PresenterToViewCookPageProtol{
+   
+    
     func toViewCooks(cookList: Array<Cook>) {
         self.cooks = cookList
         DispatchQueue.main.async {
@@ -66,7 +74,8 @@ extension CookPageController:PresenterToViewCookPageProtol{
     
     func toViewCategories(categoryList: Array<Category>) {
         self.categories = categoryList
-        
+        let allCooks = Category(_id: "0",categoryName: "All")
+        self.categories.insert(allCooks, at: 0)
         DispatchQueue.main.async {
             self.cookCategoriesCollectionView.reloadData()
         }
@@ -85,18 +94,33 @@ extension CookPageController : UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : CategoriesCVC = cookCategoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoriesCVC
+        let cell = cookCategoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoriesCVC
        // let widthCVC = self.cookCategoriesCollectionView.layer.frame.size.width
         cell.layer.cornerRadius = 20
         cell.categoryLabel.text = self.categories[indexPath.row].categoryName
         cell.layer.backgroundColor = UIColor.red.cgColor
         cell.categoryLabel.textColor = UIColor.white
         
+        if lastIndexSelection == [0,0] && indexPath.row == 0 {
+            cell.backgroundColor = UIColor.blue
+        }
         return cell
     }
     
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        // Change backround color when selected category
+        if self.lastIndexSelection != indexPath {
+            let cell = self.cookCategoriesCollectionView.cellForItem(at: indexPath) as! CategoriesCVC
+            cell.backgroundColor = UIColor.blue
+            let cellSelection = self.cookCategoriesCollectionView.cellForItem(at: self.lastIndexSelection) as? CategoriesCVC
+            cellSelection?.backgroundColor = UIColor.red
+            self.lastIndexSelection = indexPath
+            let category = categories[indexPath.row]
+            cookPageObject?.getCooksAction(categoryId:category._id! )
+        }
+    }
 }
 
 /// Cooks
