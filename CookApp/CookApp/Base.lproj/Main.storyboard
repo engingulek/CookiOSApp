@@ -397,7 +397,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zp1-Au-3pk">
                                 <rect key="frame" x="40" y="276" width="295" height="121.66666666666669"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cook Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhn-PT-Ayz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cook Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhn-PT-Ayz">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="48.666666666666664"/>
                                         <color key="backgroundColor" name="searchBarViewColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -474,9 +474,12 @@
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="qbq-eQ-VAg"/>
                     <connections>
+                        <outlet property="cookImage" destination="oe4-pJ-ufE" id="TUA-pG-J3j"/>
                         <outlet property="cookNameLabel" destination="Uhn-PT-Ayz" id="101-By-agj"/>
                         <outlet property="detailView" destination="zp1-Au-3pk" id="LZ6-fO-dRX"/>
                         <outlet property="ingredientTableView" destination="E5W-jS-7dw" id="TTL-bV-Q8w"/>
+                        <outlet property="minuteLabel" destination="JEP-Xd-DQ3" id="Sij-lp-777"/>
+                        <outlet property="ratingLabel" destination="V1k-QE-eCG" id="m8S-4N-UyN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWq-Pc-wRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -587,10 +590,11 @@
                             <constraint firstItem="n0m-YA-lzO" firstAttribute="width" secondItem="YjY-ln-nUD" secondAttribute="width" id="wYa-BZ-yZH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cooks" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" style="browser" customizationIdentifier="" id="mEq-tF-Eeu"/>
+                    <navigationItem key="navigationItem" title="Cooks" largeTitleDisplayMode="always" style="browser" customizationIdentifier="" id="mEq-tF-Eeu"/>
                     <connections>
                         <outlet property="cookCategoriesCollectionView" destination="n0m-YA-lzO" id="wcn-ac-wXB"/>
                         <outlet property="cooksTableView" destination="EQS-oz-bi0" id="mRQ-Hi-7Vo"/>
+                        <segue destination="Jqy-X1-6Kc" kind="show" identifier="cookPageToDetailPage" id="7mG-jY-7r3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWI-7f-4A7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -835,6 +839,9 @@
             <point key="canvasLocation" x="3501.5999999999999" y="1226.6009852216748"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7mG-jY-7r3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="addImage" width="170.66667175292969" height="170.66667175292969"/>
         <image name="bell.fill" catalog="system" width="123" height="128"/>

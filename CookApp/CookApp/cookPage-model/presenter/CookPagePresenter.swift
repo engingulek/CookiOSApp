@@ -8,13 +8,14 @@
 import Foundation
 
 class CookPagePresenter : ViewToPresenterCookPageProtocol {
-    func getCooksAction() {
-        <#code#>
-    }
-    
     var interactor: PresenterToInteractorCookPageProtocol?
     
     var cookPageView: PresenterToViewCookPageProtol?
+   
+    
+    func getCooksAction() {
+        interactor?.getCooks()
+    }
     
     func getCategoriesAction() {
         interactor?.getCategories()
@@ -25,6 +26,7 @@ class CookPagePresenter : ViewToPresenterCookPageProtocol {
 extension CookPagePresenter : InteractorToPresenterCookPageProtocol {
     
     func toPresenterCooks(cookList: Array<Cook>) {
+        cookPageView?.toViewCooks(cookList: cookList)
     }
     
     func toPresenterCategories(categoryList: Array<Category>) {

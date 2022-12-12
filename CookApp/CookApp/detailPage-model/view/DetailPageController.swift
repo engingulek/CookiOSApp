@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class IngredientAdd {
     var ingredients : [String]?
     var header : String?
@@ -23,13 +23,18 @@ class IngredientAdd {
 
 class DetailPageController: UIViewController {
  
+    @IBOutlet weak var cookImage: UIImageView!
     
+    @IBOutlet weak var ratingLabel: UILabel!
+    
+    @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var cookNameLabel: UILabel!
     @IBOutlet var detailView: UIView!
     @IBOutlet weak var ingredientTableView: UITableView!
     var ingredientsListTest = [IngredientAdd]()
     var getIngredientsListApi = [String]()
     var addedIngredientsList = [String]()
+    var cook:Cook?
     
     
     override func viewDidLoad() {
@@ -39,15 +44,21 @@ class DetailPageController: UIViewController {
         ingredientTableView.register(UINib(nibName: "ATVC", bundle: nil), forCellReuseIdentifier: "atvc")
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
-        getIngredientsListApi.append("A")
-        getIngredientsListApi.append("B")
-        getIngredientsListApi.append("C")
-        getIngredientsListApi.append("D")
-        getIngredientsListApi.append("E")
-        getIngredientsListApi.append("F")
-        getIngredientsListApi.append("G")
-        ingredientsListTest.append(IngredientAdd.init(ingredients: getIngredientsListApi, header: "Ingredients",labelColor: UIColor.black,buttonHiddenState: false))
+        getIngredientsListApi = (cook?.ingredients)!
+     
+        
         //ingredientsListTest.append(IngredientAdd.init(ingredients: addedIngredientsList, header: "Added Ingredients"))
+        cookNameLabel.text = cook?.name
+        let url = URL(string: (cook?.imageURL!)!)
+        cookImage.kf.setImage(with: url)
+        if let rating = cook?.rating,let minute = cook?.minute  {
+            ratingLabel.text = "\(rating)"
+            minuteLabel.text = "\(minute)"
+            
+        }
+        
+        ingredientsListTest.append(IngredientAdd.init(ingredients: getIngredientsListApi, header: "Ingredients",labelColor: UIColor.black,buttonHiddenState: false))
+      
         
     
     }

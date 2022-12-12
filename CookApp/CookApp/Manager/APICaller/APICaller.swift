@@ -11,6 +11,7 @@ import Alamofire
 struct Constant {
     static let baseURL = "http://localhost:3000/"
     static let getCategoryRouter = "categories"
+    static let getCookRouter = "cooks"
 }
 
 class APICaller {

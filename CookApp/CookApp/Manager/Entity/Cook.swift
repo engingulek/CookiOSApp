@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Cook {
+struct Cook:Codable {
     var imageURL:String?
     var name:String?
     var category:Category?

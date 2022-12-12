@@ -7,13 +7,14 @@
 
 
 import UIKit
-
+import Kingfisher
 class CookPageController : UIViewController {
     @IBOutlet weak var cookCategoriesCollectionView: UICollectionView!
     
     @IBOutlet weak var cooksTableView: UITableView!
     var cookPageObject : ViewToPresenterCookPageProtocol?
     var categories = [Category]()
+    var cooks = [Cook]()
     override func viewDidLoad() {
         CookPageRouter.createModel(ref: self)
         self.tabBarController?.tabBar.isHidden = true
@@ -30,6 +31,7 @@ class CookPageController : UIViewController {
         setupUI()
         
         cookPageObject?.getCategoriesAction()
+        cookPageObject?.getCooksAction()
     }
     
     private func setupUI(){
@@ -46,7 +48,6 @@ class CookPageController : UIViewController {
         self.cookCategoriesCollectionView.collectionViewLayout = designCategoriesCVC
         
         
-        
     }
 }
 
@@ -55,11 +56,17 @@ class CookPageController : UIViewController {
 /// Presenter to view protocol
 extension CookPageController:PresenterToViewCookPageProtol{
     func toViewCooks(cookList: Array<Cook>) {
+        self.cooks = cookList
+        DispatchQueue.main.async {
+            self.cooksTableView.reloadData()
+        }
+    
         
     }
     
     func toViewCategories(categoryList: Array<Category>) {
         self.categories = categoryList
+        
         DispatchQueue.main.async {
             self.cookCategoriesCollectionView.reloadData()
         }
@@ -69,7 +76,7 @@ extension CookPageController:PresenterToViewCookPageProtol{
 }
 
 
-//Mark: -Delegate and Datasource
+//MARK: - Delegate and Datasource
 
 /// Categories
 extension CookPageController : UICollectionViewDelegate,UICollectionViewDataSource{
@@ -84,8 +91,10 @@ extension CookPageController : UICollectionViewDelegate,UICollectionViewDataSour
         cell.categoryLabel.text = self.categories[indexPath.row].categoryName
         cell.layer.backgroundColor = UIColor.red.cgColor
         cell.categoryLabel.textColor = UIColor.white
+        
         return cell
     }
+    
     
     
 }
@@ -93,13 +102,32 @@ extension CookPageController : UICollectionViewDelegate,UICollectionViewDataSour
 /// Cooks
 extension CookPageController : UITableViewDelegate,UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return cooks.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : CookTVC = cooksTableView.dequeueReusableCell(withIdentifier: "cookCell",for:indexPath)
         as! CookTVC
         let height = self.cooksTableView.layer.frame.size.height
         self.cooksTableView.rowHeight = height/5
+        let cook = cooks[indexPath.row]
+        cell.name.text = cook.name
+        let url = URL(string: cook.imageURL!)
+        cell.cookImage.kf.setImage(with: url)
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cook = cooks[indexPath.row]
+        performSegue(withIdentifier: "cookPageToDetailPage", sender: cook)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cookPageToDetailPage" {
+            if let cook = sender as? Cook{
+                let toDetailPage = segue.destination as? DetailPageController
+                toDetailPage?.cook = cook
+            }
+        }else{
+            return
+        }
     }
 }
