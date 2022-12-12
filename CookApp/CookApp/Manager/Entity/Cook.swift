@@ -11,10 +11,8 @@ struct Cook {
     var imageURL:String?
     var name:String?
     var category:Category?
-    var rating:String?
-    var minute:String?
+    var detail:String?
+    var rating:Double?
+    var minute:Int?
     var ingredients : [String]?
-    var makeNameSurname:String?
-    // var trendCount : Int?
-    // var addTime: String?
 }

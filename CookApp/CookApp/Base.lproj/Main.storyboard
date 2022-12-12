@@ -549,7 +549,7 @@
             </objects>
             <point key="canvasLocation" x="4740" y="-325"/>
         </scene>
-        <!--Cook Page Controller-->
+        <!--Cooks-->
         <scene sceneID="vNl-jP-QSu">
             <objects>
                 <viewController id="kgu-RO-urY" customClass="CookPageController" customModule="CookApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -587,7 +587,7 @@
                             <constraint firstItem="n0m-YA-lzO" firstAttribute="width" secondItem="YjY-ln-nUD" secondAttribute="width" id="wYa-BZ-yZH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" style="browser" id="mEq-tF-Eeu"/>
+                    <navigationItem key="navigationItem" title="Cooks" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" style="browser" customizationIdentifier="" id="mEq-tF-Eeu"/>
                     <connections>
                         <outlet property="cookCategoriesCollectionView" destination="n0m-YA-lzO" id="wcn-ac-wXB"/>
                         <outlet property="cooksTableView" destination="EQS-oz-bi0" id="mRQ-Hi-7Vo"/>

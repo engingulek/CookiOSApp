@@ -54,7 +54,11 @@ class CookPageController : UIViewController {
 
 /// Presenter to view protocol
 extension CookPageController:PresenterToViewCookPageProtol{
-    func toView(categoryList: Array<Category>) {
+    func toViewCooks(cookList: Array<Cook>) {
+        
+    }
+    
+    func toViewCategories(categoryList: Array<Category>) {
         self.categories = categoryList
         DispatchQueue.main.async {
             self.cookCategoriesCollectionView.reloadData()

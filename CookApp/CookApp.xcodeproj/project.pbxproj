@@ -145,7 +145,6 @@
 		7D0BB106290EBBC800D1B6FC /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				7D0BB10C290ED52800D1B6FC /* Cook.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -433,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				7DCC48312945EAC5000BF48D /* Category.swift */,
+				7D0BB10C290ED52800D1B6FC /* Cook.swift */,
 				7DCC4840294616BB000BF48D /* DataResult.swift */,
 			);
 			path = Entity;

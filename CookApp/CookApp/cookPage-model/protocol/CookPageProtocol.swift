@@ -10,21 +10,46 @@ import Foundation
 protocol ViewToPresenterCookPageProtocol {
     var interactor : PresenterToInteractorCookPageProtocol? {get set}
     var cookPageView : PresenterToViewCookPageProtol? {get set}
+    // MARK: - View Action
+    
+    ///Categories data action
     func getCategoriesAction()
+    
+    /// Cook data action
+    func getCooksAction()
+
 }
 
 protocol PresenterToInteractorCookPageProtocol{
     var cookPagePresenter : InteractorToPresenterCookPageProtocol? {get set}
+    // MARK: - Interaction Action
+    
+    /// Categories fetch data
     func getCategories()
     
+    /// Cook fetch data
+    func getCooks()
 }
 
 protocol InteractorToPresenterCookPageProtocol{
-    func toPresenter(categoryList:Array<Category>)
+    // MARK: toPresenter
+    
+    /// toPresenter categories
+    func toPresenterCategories(categoryList:Array<Category>)
+    
+    /// toPresenter cooks
+    func toPresenterCooks(cookList:Array<Cook>)
 }
 
 protocol PresenterToViewCookPageProtol{
-    func toView(categoryList:Array<Category>)
+    
+    // MARK: toView
+    
+    /// toView categories
+    func toViewCategories(categoryList:Array<Category>)
+    
+    /// toView Cooks
+     func toViewCooks(cookList:Array<Cook>)
 }
 
 protocol PresenterToRouterCookPageProtocol{
