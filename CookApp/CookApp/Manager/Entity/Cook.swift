@@ -15,4 +15,5 @@ struct Cook:Codable {
     var rating:Double?
     var minute:Int?
     var ingredients : [String]?
+    var date : String?
 }

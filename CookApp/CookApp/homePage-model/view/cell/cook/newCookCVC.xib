@@ -24,14 +24,8 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-hP-pfh">
-                        <rect key="frame" x="136.66666666666666" y="5" width="261.33333333333337" height="21.666666666666668"/>
+                        <rect key="frame" x="133.66666666666666" y="0.0" width="267.33333333333337" height="119"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Food Detail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUp-LP-hHI">
-                        <rect key="frame" x="136.66666666666666" y="49.666666666666664" width="261.33333333333337" height="69.333333333333343"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -40,20 +34,18 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="c2o-hP-pfh" secondAttribute="trailing" constant="3" id="62s-ec-DXf"/>
-                <constraint firstItem="c2o-hP-pfh" firstAttribute="leading" secondItem="w6Y-nV-94m" secondAttribute="trailing" constant="3" id="7Tu-3q-Gvz"/>
+                <constraint firstAttribute="bottom" secondItem="c2o-hP-pfh" secondAttribute="bottom" id="1Sq-Qz-BqM"/>
+                <constraint firstItem="c2o-hP-pfh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7Co-7E-jbh"/>
                 <constraint firstItem="w6Y-nV-94m" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IYp-xg-9ZL"/>
+                <constraint firstAttribute="trailing" secondItem="c2o-hP-pfh" secondAttribute="trailing" id="Kaw-4J-7T7"/>
                 <constraint firstItem="w6Y-nV-94m" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ltx-hu-ZRB"/>
-                <constraint firstItem="pUp-LP-hHI" firstAttribute="top" secondItem="c2o-hP-pfh" secondAttribute="bottom" constant="23" id="MW9-14-wag"/>
-                <constraint firstItem="pUp-LP-hHI" firstAttribute="leading" secondItem="w6Y-nV-94m" secondAttribute="trailing" constant="3" id="YUn-uy-x96"/>
+                <constraint firstItem="c2o-hP-pfh" firstAttribute="leading" secondItem="w6Y-nV-94m" secondAttribute="trailing" id="QAm-9u-DH7"/>
                 <constraint firstAttribute="bottom" secondItem="w6Y-nV-94m" secondAttribute="bottom" id="jIr-6P-6wf"/>
-                <constraint firstAttribute="trailing" secondItem="pUp-LP-hHI" secondAttribute="trailing" constant="3" id="rS1-qP-bjb"/>
-                <constraint firstItem="c2o-hP-pfh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="rXj-68-xdt"/>
-                <constraint firstAttribute="bottom" secondItem="pUp-LP-hHI" secondAttribute="bottom" id="xre-s9-fHG"/>
             </constraints>
             <size key="customSize" width="401" height="119"/>
             <connections>
                 <outlet property="foodImageView" destination="w6Y-nV-94m" id="Hku-e6-HHg"/>
+                <outlet property="name" destination="c2o-hP-pfh" id="rVc-4X-ggw"/>
             </connections>
             <point key="canvasLocation" x="200.76923076923077" y="45.142180094786731"/>
         </collectionViewCell>
