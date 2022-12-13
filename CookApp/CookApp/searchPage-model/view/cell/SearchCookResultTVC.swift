@@ -11,5 +11,6 @@ class SearchCookResultTVC: UITableViewCell {
     
     @IBOutlet weak var cookImageView: UIImageView!
     
-    @IBOutlet weak var cookImageName: UILabel!
+    @IBOutlet weak var cookName: UILabel!
+    
 }

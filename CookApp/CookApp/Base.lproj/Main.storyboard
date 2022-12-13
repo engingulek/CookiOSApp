@@ -550,7 +550,7 @@
             </objects>
             <point key="canvasLocation" x="4863.1999999999998" y="-1091.3793103448277"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="fu3-E5-bW4">
             <objects>
                 <viewController id="NSo-4n-vf6" customClass="SearchViewController" customModule="CookApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -559,11 +559,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PUX-0U-Kte">
-                                <rect key="frame" x="0.0" y="47" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="91" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aj4-Kq-1ql">
-                                <rect key="frame" x="0.0" y="103" width="375" height="626"/>
+                                <rect key="frame" x="0.0" y="147" width="375" height="582"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" id="MhS-im-UUe">
@@ -589,23 +589,23 @@
                             <constraint firstItem="PUX-0U-Kte" firstAttribute="leading" secondItem="30X-sI-xz2" secondAttribute="leading" id="mca-Xe-rOu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="6Fg-N3-Bey"/>
+                    <navigationItem key="navigationItem" title="Search" id="kUP-Bd-cVa"/>
                     <connections>
                         <outlet property="searchBar" destination="PUX-0U-Kte" id="xCq-7Y-0BF"/>
                         <outlet property="searchHistoryTableView" destination="aj4-Kq-1ql" id="GAM-jF-enO"/>
-                        <segue destination="VdR-vB-58g" kind="show" identifier="toSearchResult" id="WXO-BP-QWw"/>
+                        <segue destination="Jqy-X1-6Kc" kind="show" identifier="searchPageToDetail" id="MFb-t7-6Y2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G11-qo-uEN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3502" y="-325"/>
+            <point key="canvasLocation" x="4444" y="-325.1231527093596"/>
         </scene>
         <!--Search Result View-->
         <scene sceneID="409-qA-5ak">
             <objects>
                 <viewController id="VdR-vB-58g" customClass="SearchResultView" customModule="CookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F8M-qB-rjy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="56u-6V-SYD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -614,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXC-c4-wjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4740" y="-325"/>
+            <point key="canvasLocation" x="5682.3999999999996" y="-325.1231527093596"/>
         </scene>
         <!--Cooks-->
         <scene sceneID="vNl-jP-QSu">
@@ -677,7 +677,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="EeR-Xg-EPc" kind="relationship" relationship="viewControllers" id="QxE-lM-6Xs"/>
-                        <segue destination="NSo-4n-vf6" kind="relationship" relationship="viewControllers" id="sra-Pv-scY"/>
+                        <segue destination="sL2-Q4-Q42" kind="relationship" relationship="viewControllers" id="sra-Pv-scY"/>
                         <segue destination="ScS-tH-AY1" kind="relationship" relationship="viewControllers" id="fCz-gg-n45"/>
                         <segue destination="ioY-1r-tCG" kind="relationship" relationship="viewControllers" id="8ZJ-t4-XRO"/>
                         <segue destination="be3-vI-Qol" kind="relationship" relationship="viewControllers" id="tF3-Z8-0jb"/>
@@ -920,9 +920,28 @@
             </objects>
             <point key="canvasLocation" x="3920.8000000000002" y="-1091.3793103448277"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TYi-cn-P68">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sL2-Q4-Q42" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="6Fg-N3-Bey"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qwm-XE-20E">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NSo-4n-vf6" kind="relationship" relationship="rootViewController" id="yc4-7v-QDN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gs4-N8-05W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3501.5999999999999" y="-325.1231527093596"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aSL-GE-6wY"/>
+        <segue reference="MFb-t7-6Y2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addImage" width="170.66667175292969" height="170.66667175292969"/>
