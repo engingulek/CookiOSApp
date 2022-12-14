@@ -41,6 +41,9 @@ class SearchViewController: UIViewController {
         searchBar.text = ""
         searchHistoryTableView.reloadData()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
 }
 

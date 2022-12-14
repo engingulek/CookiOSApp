@@ -42,6 +42,11 @@
 		7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */; };
 		7DC1BDA829428D38004866AB /* AddCookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1BDA729428D38004866AB /* AddCookView.swift */; };
 		7DC1F23529097243001CA5DE /* PageControllerCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1F23429097243001CA5DE /* PageControllerCVC.swift */; };
+		7DC324C82949C13800328D18 /* SendDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC324C72949C13800328D18 /* SendDataResult.swift */; };
+		7DC324CE2949C3C400328D18 /* AddCookPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC324CD2949C3C400328D18 /* AddCookPageProtocol.swift */; };
+		7DC324D02949C4CE00328D18 /* AddCookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC324CF2949C4CE00328D18 /* AddCookPresenter.swift */; };
+		7DC324D22949C54C00328D18 /* AddCookInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC324D12949C54C00328D18 /* AddCookInteractor.swift */; };
+		7DC324D52949CBC000328D18 /* AddCookRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC324D42949CBC000328D18 /* AddCookRouter.swift */; };
 		7DCC482C2945E7C8000BF48D /* CookPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC482B2945E7C8000BF48D /* CookPageProtocol.swift */; };
 		7DCC48322945EAC5000BF48D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC48312945EAC5000BF48D /* Category.swift */; };
 		7DCC48352945EEFB000BF48D /* CookPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC48342945EEFB000BF48D /* CookPagePresenter.swift */; };
@@ -94,6 +99,11 @@
 		7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsCVC.xib; sourceTree = "<group>"; };
 		7DC1BDA729428D38004866AB /* AddCookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookView.swift; sourceTree = "<group>"; };
 		7DC1F23429097243001CA5DE /* PageControllerCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllerCVC.swift; sourceTree = "<group>"; };
+		7DC324C72949C13800328D18 /* SendDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataResult.swift; sourceTree = "<group>"; };
+		7DC324CD2949C3C400328D18 /* AddCookPageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookPageProtocol.swift; sourceTree = "<group>"; };
+		7DC324CF2949C4CE00328D18 /* AddCookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookPresenter.swift; sourceTree = "<group>"; };
+		7DC324D12949C54C00328D18 /* AddCookInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookInteractor.swift; sourceTree = "<group>"; };
+		7DC324D42949CBC000328D18 /* AddCookRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookRouter.swift; sourceTree = "<group>"; };
 		7DCC482B2945E7C8000BF48D /* CookPageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPageProtocol.swift; sourceTree = "<group>"; };
 		7DCC48312945EAC5000BF48D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7DCC48342945EEFB000BF48D /* CookPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPagePresenter.swift; sourceTree = "<group>"; };
@@ -345,6 +355,10 @@
 		7D66C12F29434C5F00F49A23 /* addCookPage-model */ = {
 			isa = PBXGroup;
 			children = (
+				7DC324D32949CBB200328D18 /* router */,
+				7DC324CB2949C2B800328D18 /* presenter */,
+				7DC324CA2949C2B000328D18 /* protocol */,
+				7DC324C92949C2A800328D18 /* interactor */,
 				7DD592FB2943A1C800C1859F /* entity */,
 				7DD592FA2943A1BF00C1859F /* view */,
 			);
@@ -424,6 +438,46 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		7DC324C62949B9A000328D18 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7D5B8F342948A0CA0046DCE9 /* SearchPagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7DC324C92949C2A800328D18 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7DC324D12949C54C00328D18 /* AddCookInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		7DC324CA2949C2B000328D18 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7DC324CD2949C3C400328D18 /* AddCookPageProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		7DC324CB2949C2B800328D18 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7DC324CF2949C4CE00328D18 /* AddCookPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7DC324D32949CBB200328D18 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				7DC324D42949CBC000328D18 /* AddCookRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		7DCC48272945E64B000BF48D /* router */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +525,7 @@
 				7DCC48312945EAC5000BF48D /* Category.swift */,
 				7D0BB10C290ED52800D1B6FC /* Cook.swift */,
 				7DCC4840294616BB000BF48D /* DataResult.swift */,
+				7DC324C72949C13800328D18 /* SendDataResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -524,11 +579,11 @@
 		7DD593002943B64000C1859F /* searchPage-model */ = {
 			isa = PBXGroup;
 			children = (
+				7DC324C62949B9A000328D18 /* presenter */,
 				7D5B8F392948AC630046DCE9 /* router */,
 				7D5B8F362948A2790046DCE9 /* interactor */,
 				7D5B8F3129489F490046DCE9 /* protocol */,
 				7DD593012943B64D00C1859F /* view */,
-				7D5B8F342948A0CA0046DCE9 /* SearchPagePresenter.swift */,
 			);
 			path = "searchPage-model";
 			sourceTree = "<group>";
@@ -662,6 +717,7 @@
 				7D0BB10B290EBF3E00D1B6FC /* HomePageRouter.swift in Sources */,
 				7D8D12652944B33900E7C882 /* MyAccountView.swift in Sources */,
 				7D2365AB29448E2D00F0618B /* SearchCookResultTVC.swift in Sources */,
+				7DC324D52949CBC000328D18 /* AddCookRouter.swift in Sources */,
 				7D8D12612944A8AF00E7C882 /* NoticationsView.swift in Sources */,
 				7DCC48372945F20C000BF48D /* CookPageInteractor.swift in Sources */,
 				7D209C302909571C009015DB /* PageController.swift in Sources */,
@@ -671,15 +727,19 @@
 				7D5B8F382948A28D0046DCE9 /* SearchPageInteractor.swift in Sources */,
 				7DCD8A7A2909B8B9001964D4 /* HomePageVC.swift in Sources */,
 				7DCC48392945F441000BF48D /* CookPageRouter.swift in Sources */,
+				7DC324CE2949C3C400328D18 /* AddCookPageProtocol.swift in Sources */,
 				7D9FEBA4290AFC400034C650 /* TrendsCVC.swift in Sources */,
 				7D0BB10D290ED52800D1B6FC /* Cook.swift in Sources */,
 				7D209C2C2909571C009015DB /* AppDelegate.swift in Sources */,
 				7DD592FD2943A1F200C1859F /* AddCook.swift in Sources */,
 				7D5B8F352948A0CA0046DCE9 /* SearchPagePresenter.swift in Sources */,
+				7DC324C82949C13800328D18 /* SendDataResult.swift in Sources */,
 				7DCC483F294612C5000BF48D /* APICaller.swift in Sources */,
 				7D209C2E2909571C009015DB /* SceneDelegate.swift in Sources */,
 				7DCC48322945EAC5000BF48D /* Category.swift in Sources */,
 				7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */,
+				7DC324D22949C54C00328D18 /* AddCookInteractor.swift in Sources */,
+				7DC324D02949C4CE00328D18 /* AddCookPresenter.swift in Sources */,
 				7D8475CF290961B5000D6EA1 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

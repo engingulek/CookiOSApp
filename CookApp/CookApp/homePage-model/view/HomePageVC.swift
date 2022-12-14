@@ -33,7 +33,9 @@ class HomePageVC: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
+        homePageObject?.getCookAction()
     }
     /// setupDesign
     private func setupUI(){

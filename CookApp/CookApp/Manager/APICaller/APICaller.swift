@@ -12,6 +12,7 @@ struct Constant {
     static let baseURL = "http://localhost:3000/"
     static let getCategoryRouter = "categories"
     static let getCookRouter = "cooks"
+    static let addCook = "addCook"
 }
 
 class APICaller {
@@ -30,6 +31,63 @@ class APICaller {
                 }
             }
         }
+    }
+    
+    
+    func sendData(router:String,data:Cook,completion:@escaping(Result<String?,Error>)->()){
+        let url = "\(Constant.baseURL)\(router)"
+        let currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        _ = formatter.date(from: "\(currentDate)")
+        /*formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+         let parsedDate = formatter.date(from: "\(currentDate)")*/
+        print(currentDate)
+            
         
+        let params : Parameters = ["imageURL":data.imageURL!,
+                                   "name":data.name!,
+                                   "category" : [
+                                    "_id":data.category?._id,
+                                    "categoryName":data.category?.categoryName
+                                   ],
+                                   "detail":data.detail!,
+                                   "rating":data.rating!,
+                                   "minute":data.minute!,
+                                   "date" : "\(currentDate)",
+                                   "ingredients":data.ingredients!]
+        print(params)
+        AF.request(url,method: .post,parameters: params,encoding: JSONEncoding.init()).response{ response in
+            if let data = response.data {
+                do {
+                    let result = try JSONSerialization.jsonObject(with: data)
+                    completion(.success("success"))
+                    print(result)
+                }catch{
+                    print("Send Data Error \(error.localizedDescription)")
+                    completion(.failure(error))
+                }
+            }
+            
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

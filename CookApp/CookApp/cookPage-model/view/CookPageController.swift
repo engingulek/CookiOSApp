@@ -34,11 +34,10 @@ class CookPageController : UIViewController {
         cookPageObject?.getCategoriesAction()
         cookPageObject?.getCooksAction()
         self.lastIndexSelection = [0,0]
-       
-        
-        
-        
     }
+    
+   
+  
     
     private func setupUI(){
         
