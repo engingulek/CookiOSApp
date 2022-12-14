@@ -40,6 +40,7 @@
 		7D8D12652944B33900E7C882 /* MyAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D12642944B33900E7C882 /* MyAccountView.swift */; };
 		7D9FEBA4290AFC400034C650 /* TrendsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */; };
 		7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */; };
+		7DBC2A34294A4A4600515A89 /* SingInAndUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC2A33294A4A4600515A89 /* SingInAndUpViewController.swift */; };
 		7DC1BDA829428D38004866AB /* AddCookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1BDA729428D38004866AB /* AddCookView.swift */; };
 		7DC1F23529097243001CA5DE /* PageControllerCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1F23429097243001CA5DE /* PageControllerCVC.swift */; };
 		7DC324C82949C13800328D18 /* SendDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC324C72949C13800328D18 /* SendDataResult.swift */; };
@@ -101,6 +102,7 @@
 		7D8D12642944B33900E7C882 /* MyAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountView.swift; sourceTree = "<group>"; };
 		7D9FEBA2290AFC400034C650 /* TrendsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsCVC.swift; sourceTree = "<group>"; };
 		7D9FEBA3290AFC400034C650 /* TrendsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsCVC.xib; sourceTree = "<group>"; };
+		7DBC2A33294A4A4600515A89 /* SingInAndUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInAndUpViewController.swift; sourceTree = "<group>"; };
 		7DC1BDA729428D38004866AB /* AddCookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookView.swift; sourceTree = "<group>"; };
 		7DC1F23429097243001CA5DE /* PageControllerCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllerCVC.swift; sourceTree = "<group>"; };
 		7DC324C72949C13800328D18 /* SendDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataResult.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				7DC1F2332909722D001CA5DE /* cell */,
+				7DBC2A33294A4A4600515A89 /* SingInAndUpViewController.swift */,
 				7D209C2F2909571C009015DB /* PageController.swift */,
 			);
 			path = view;
@@ -758,6 +761,7 @@
 				7DC324C82949C13800328D18 /* SendDataResult.swift in Sources */,
 				7DCC483F294612C5000BF48D /* APICaller.swift in Sources */,
 				7D209C2E2909571C009015DB /* SceneDelegate.swift in Sources */,
+				7DBC2A34294A4A4600515A89 /* SingInAndUpViewController.swift in Sources */,
 				7DCC48322945EAC5000BF48D /* Category.swift in Sources */,
 				7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */,
 				7DC324D22949C54C00328D18 /* AddCookInteractor.swift in Sources */,

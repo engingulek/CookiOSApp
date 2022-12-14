@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseCore
 class PageController: UIViewController {
     
     var slides : [Slide] = []
@@ -15,6 +15,7 @@ class PageController: UIViewController {
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var slideCollectionView: UICollectionView!
+    let singInUpRef = UserDefaults.standard
     
     
     var curruntPage = 0 {
@@ -39,15 +40,19 @@ class PageController: UIViewController {
         pageController.isEnabled = false
         getStartedButton.layer.cornerRadius = 20
         
+       
+          
+        
+        
     }
     
     
-    @IBAction func skipAction(_ sender: Any) {
-        // Go to Sing In Page
+    @IBAction func singInGoogleClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toAuth", sender: nil)
+        
+        
     }
     
-    @IBAction func getStartedAction(_ sender: Any) {
-    }
 }
 
 extension PageController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {

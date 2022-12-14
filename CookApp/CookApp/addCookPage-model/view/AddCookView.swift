@@ -122,12 +122,6 @@ class AddCookView: UIViewController {
                                                ingredients: self.addedIngredientsList,
                                                date: "b")
                             self.addCookObject?.sendDataAction(addCook: newCook)
-                           /* var newCook = Cook(imageURL:"url",
-                                               name: cookNameTextField.text,)*/
-                            /*var newCook = AddCook(imageUrl: "url",
-                                                  name: cookNameTextField.text!,
-                                                  detail: cookDetailTextField.text!, category: selectedCategory,
-                                                  minute: Int(cookMinuteTextField.text!), ingredients: addedIngredientsList)*/
                             self.cookNameTextField.text = ""
                             self.cookMinuteTextField.text = ""
                             self.addedIngredientsList = []
