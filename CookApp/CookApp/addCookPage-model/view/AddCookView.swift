@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
 class AddCookView: UIViewController {
     @IBOutlet weak var addedIngredientsTableView: UITableView!
@@ -98,26 +100,48 @@ class AddCookView: UIViewController {
             if addedIngredientsList.count < 5 && addedStepsList.count < 5 {
                 alertMessage(title: "Warning", message: "Ingredients or Steps count must least 5")
             }else{
-                let newCook = Cook(imageURL: "https://www.seriouseats.com/thmb/xw1krLC9Yh85qx1wl5jw0BPCWHk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2015__07__20210324-SouthernFriedChicken-Andrew-Janjigian-21-cea1fe39234844638018b15259cabdc2.jpg",
-                                   name: cookNameTextField.text,
-                                   category: selectedCategory,
-                                   detail: addedStepsList,
-                                   rating: 0,
-                                   minute: Int(cookMinuteTextField.text!),
-                                   ingredients: addedIngredientsList,
-                                   date: "b")
-                addCookObject?.sendDataAction(addCook: newCook)
-               /* var newCook = Cook(imageURL:"url",
-                                   name: cookNameTextField.text,)*/
-                /*var newCook = AddCook(imageUrl: "url",
-                                      name: cookNameTextField.text!,
-                                      detail: cookDetailTextField.text!, category: selectedCategory,
-                                      minute: Int(cookMinuteTextField.text!), ingredients: addedIngredientsList)*/
-                cookNameTextField.text = ""
-                cookMinuteTextField.text = ""
-                addedIngredientsList = []
-                categoryPickerView.reloadAllComponents()
-                cookImageView.image = UIImage(named: "addImage")
+                var imageurl = ""
+                let randomID = UUID.init().uuidString
+                let uploadRef = Storage.storage().reference(withPath: "cooiOSApp/\(randomID).jpg")
+                guard let imageData = cookImageView.image?.jpegData(compressionQuality: 0.75) else {return}
+                let uploadMetadata  = StorageMetadata.init()
+                uploadMetadata.contentType = "image/jpeg"
+                
+                uploadRef.putData(imageData,metadata: uploadMetadata){ dowloadMetaData,error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }else{
+                        uploadRef.downloadURL { url, error in
+                            imageurl = url!.absoluteString
+                            let newCook = Cook(imageURL: imageurl,
+                                               name: self.cookNameTextField.text,
+                                               category: self.selectedCategory,
+                                               detail: self.addedStepsList,
+                                               rating: 0,
+                                               minute: Int(self.cookMinuteTextField.text!),
+                                               ingredients: self.addedIngredientsList,
+                                               date: "b")
+                            self.addCookObject?.sendDataAction(addCook: newCook)
+                           /* var newCook = Cook(imageURL:"url",
+                                               name: cookNameTextField.text,)*/
+                            /*var newCook = AddCook(imageUrl: "url",
+                                                  name: cookNameTextField.text!,
+                                                  detail: cookDetailTextField.text!, category: selectedCategory,
+                                                  minute: Int(cookMinuteTextField.text!), ingredients: addedIngredientsList)*/
+                            self.cookNameTextField.text = ""
+                            self.cookMinuteTextField.text = ""
+                            self.addedIngredientsList = []
+                            self.categoryPickerView.reloadAllComponents()
+                            self.cookImageView.image = UIImage(named: "addImage")
+                        }
+                    }
+                    
+                }
+                
+                
+                
+                
+                
                 
             }
            

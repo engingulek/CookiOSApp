@@ -47,6 +47,10 @@
 		7DC324D02949C4CE00328D18 /* AddCookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC324CF2949C4CE00328D18 /* AddCookPresenter.swift */; };
 		7DC324D22949C54C00328D18 /* AddCookInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC324D12949C54C00328D18 /* AddCookInteractor.swift */; };
 		7DC324D52949CBC000328D18 /* AddCookRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC324D42949CBC000328D18 /* AddCookRouter.swift */; };
+		7DC324D8294A120100328D18 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7DC324D7294A120100328D18 /* FirebaseAuth */; };
+		7DC324DA294A120100328D18 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7DC324D9294A120100328D18 /* FirebaseStorage */; };
+		7DC324DD294A1AD500328D18 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7DC324DC294A1AD500328D18 /* FirebaseDatabase */; };
+		7DC324DF294A1CF400328D18 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DC324DE294A1CF400328D18 /* GoogleService-Info.plist */; };
 		7DCC482C2945E7C8000BF48D /* CookPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC482B2945E7C8000BF48D /* CookPageProtocol.swift */; };
 		7DCC48322945EAC5000BF48D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC48312945EAC5000BF48D /* Category.swift */; };
 		7DCC48352945EEFB000BF48D /* CookPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC48342945EEFB000BF48D /* CookPagePresenter.swift */; };
@@ -104,6 +108,7 @@
 		7DC324CF2949C4CE00328D18 /* AddCookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookPresenter.swift; sourceTree = "<group>"; };
 		7DC324D12949C54C00328D18 /* AddCookInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookInteractor.swift; sourceTree = "<group>"; };
 		7DC324D42949CBC000328D18 /* AddCookRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCookRouter.swift; sourceTree = "<group>"; };
+		7DC324DE294A1CF400328D18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7DCC482B2945E7C8000BF48D /* CookPageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPageProtocol.swift; sourceTree = "<group>"; };
 		7DCC48312945EAC5000BF48D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7DCC48342945EEFB000BF48D /* CookPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookPagePresenter.swift; sourceTree = "<group>"; };
@@ -123,7 +128,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DC324DD294A1AD500328D18 /* FirebaseDatabase in Frameworks */,
 				7D6376D9294734E8006A8E89 /* Kingfisher in Frameworks */,
+				7DC324DA294A120100328D18 /* FirebaseStorage in Frameworks */,
+				7DC324D8294A120100328D18 /* FirebaseAuth in Frameworks */,
 				7DCC483C2946129C000BF48D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +192,7 @@
 			children = (
 				7D209C2A2909571C009015DB /* CookApp */,
 				7D209C292909571C009015DB /* Products */,
+				7DC324DB294A1AD500328D18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,6 +223,7 @@
 				7D209C342909571D009015DB /* Assets.xcassets */,
 				7D209C362909571D009015DB /* LaunchScreen.storyboard */,
 				7D209C392909571D009015DB /* Info.plist */,
+				7DC324DE294A1CF400328D18 /* GoogleService-Info.plist */,
 			);
 			path = CookApp;
 			sourceTree = "<group>";
@@ -478,6 +488,13 @@
 			path = router;
 			sourceTree = "<group>";
 		};
+		7DC324DB294A1AD500328D18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DCC48272945E64B000BF48D /* router */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +650,9 @@
 			packageProductDependencies = (
 				7DCC483B2946129C000BF48D /* Alamofire */,
 				7D6376D8294734E8006A8E89 /* Kingfisher */,
+				7DC324D7294A120100328D18 /* FirebaseAuth */,
+				7DC324D9294A120100328D18 /* FirebaseStorage */,
+				7DC324DC294A1AD500328D18 /* FirebaseDatabase */,
 			);
 			productName = CookApp;
 			productReference = 7D209C282909571C009015DB /* CookApp.app */;
@@ -665,6 +685,7 @@
 			packageReferences = (
 				7DCC483A2946129C000BF48D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7D6376D7294734E8006A8E89 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7DC324D6294A120100328D18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 7D209C292909571C009015DB /* Products */;
 			projectDirPath = "";
@@ -687,6 +708,7 @@
 				7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */,
 				7D59E661290C576900129E67 /* newCookCVC.xib in Resources */,
 				7D8065822934E9400023E60E /* CookTVC.xib in Resources */,
+				7DC324DF294A1CF400328D18 /* GoogleService-Info.plist in Resources */,
 				7D59E659290BFB6100129E67 /* CategoriesCVC.xib in Resources */,
 				7D209C332909571C009015DB /* Main.storyboard in Resources */,
 			);
@@ -970,6 +992,14 @@
 				kind = branch;
 			};
 		};
+		7DC324D6294A120100328D18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		7DCC483A2946129C000BF48D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -985,6 +1015,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D6376D7294734E8006A8E89 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		7DC324D7294A120100328D18 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DC324D6294A120100328D18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7DC324D9294A120100328D18 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DC324D6294A120100328D18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		7DC324DC294A1AD500328D18 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DC324D6294A120100328D18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 		7DCC483B2946129C000BF48D /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
