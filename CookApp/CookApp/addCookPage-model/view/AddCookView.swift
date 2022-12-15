@@ -33,6 +33,7 @@ class AddCookView: UIViewController {
         addedIngredientsTableView.delegate = self
         addedIngredientsTableView.dataSource = self
         
+            
         stepTableView.delegate = self
         stepTableView.dataSource = self
         
@@ -52,6 +53,7 @@ class AddCookView: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         addCookObject?.getCategoriesAction()
     }
+    
     @objc func cookImageSelect(){
         cookImagePicker.delegate = self
         cookImagePicker.sourceType = .photoLibrary

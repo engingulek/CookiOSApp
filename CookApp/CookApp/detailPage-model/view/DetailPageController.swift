@@ -48,6 +48,7 @@ class DetailPageController: UIViewController {
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
         getIngredientsListApi = (cook?.ingredients)!
+        navigationController?.navigationBar.backgroundColor = UIColor.clear
      
         
         //ingredientsListTest.append(IngredientAdd.init(ingredients: addedIngredientsList, header: "Added Ingredients"))
