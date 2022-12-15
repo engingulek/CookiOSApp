@@ -11,7 +11,7 @@ class AddCookInteractor: PresenterToInteractorAddCookProtocol {
     var addCookPresenter: InteractorToPresenterAddCookProtocol?
     
     func getCategories() {
-        APICaller.shared.fetchData(router: Constant.getCategoryRouter) { (response:Result<[Category]?,Error>) in
+        APICaller.shared.fetchData(getrouter: Constant.getCategoryRouter) { (response:Result<[Category]?,Error>) in
             switch response {
             case .success(let list):
                 self.addCookPresenter?.toPresenter(categories: list!)
@@ -24,10 +24,10 @@ class AddCookInteractor: PresenterToInteractorAddCookProtocol {
     
     
     func sendData(addCook: Cook) {
-        APICaller.shared.sendData(router: Constant.addCook , data: addCook) { result in
+        APICaller.shared.sendData(getrouter: AddRouter.addCook , data: addCook) { result in
             switch result {
             case .success(let result):
-                print("Send cook \(result ?? "nnnn")")
+                print("Send cook \(result ?? 0)")
             case  .failure(let error):
                 print("Send cook \(error)")
             }

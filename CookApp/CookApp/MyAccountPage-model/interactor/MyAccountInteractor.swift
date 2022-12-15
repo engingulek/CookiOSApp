@@ -8,6 +8,20 @@
 import Foundation
 
 class MyAccountInteractor : PresenterToInteractorAccountProtocol {
+    func getLikes() {
+        
+        APICaller.shared.fetchResulrData(getrouter: Constant.getLike) { (response:Result<[LikeCook]?,Error>) in
+            switch response {
+            case .success(let list):
+                print("Aga list \(list)")
+                self.accountPagePresenter?.toAccountPagePresenterCooksLike(ccokList: list!)
+            case .failure(let error):
+                print(error)
+            }
+        }
+       
+    }
+    
     func deleteData(deleteId: String) {
         APICaller.shared.deleteData(router: Constant.deleteData, deleteId: deleteId) { result in
             switch result {
@@ -17,16 +31,15 @@ class MyAccountInteractor : PresenterToInteractorAccountProtocol {
                 print("Send cook \(error)")
             }
         }
-        
     }
     
     var accountPagePresenter: InteractorToPresenterAccountProtocol?
     
     func getCook() {
-        APICaller.shared.fetchData(router: Constant.getCookRouter) { (response:Result<[Cook]?,Error>) in
+        APICaller.shared.fetchData(getrouter: Constant.getCookRouter) { (response:Result<[Cook]?,Error>) in
             switch response {
             case .success(let list):
-                self.accountPagePresenter?.toAccountPagePresenter(ccokList: list!)
+                self.accountPagePresenter?.toAccountPagePresenterCook(ccokList: list!)
             case .failure(let error):
                 print(error)
             }

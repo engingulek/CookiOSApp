@@ -12,7 +12,6 @@ class IngredientAdd {
     var header : String?
     var labelColor:  UIColor?
     var buttonHiddenState : Bool?
-    
     init(ingredients: [String]?, header: String?,labelColor: UIColor?,buttonHiddenState: Bool?) {
         self.ingredients = ingredients
         self.header = header
@@ -33,6 +32,7 @@ class DetailPageController: UIViewController {
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet var detailView: UIView!
     @IBOutlet weak var ingredientTableView: UITableView!
+    var detailPageObject : ViewToPresenterDetailPageProtocol?
     var ingredientsListTest = [IngredientAdd]()
     var getIngredientsListApi = [String]()
     var addedIngredientsList = [String]()
@@ -42,6 +42,7 @@ class DetailPageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         detailViewDesign()
+        DetailPageRouter.createView(view: self)
         ingredientTableView.register(UINib(nibName: "IngredientTVC", bundle: nil), forCellReuseIdentifier: "ingredientCell")
         ingredientTableView.register(UINib(nibName: "ATVC", bundle: nil), forCellReuseIdentifier: "atvc")
         ingredientTableView.delegate = self
@@ -55,7 +56,7 @@ class DetailPageController: UIViewController {
         cookImage.kf.setImage(with: url)
         categoryNameLabel.text = cook?.category?.categoryName
         if let rating = cook?.rating,let minute = cook?.minute  {
-            ratingLabel.text = "\(rating)"
+            ratingLabel.text = "\(Int(rating))"
             minuteLabel.text = "\(minute)"
             
         }
@@ -94,6 +95,34 @@ class DetailPageController: UIViewController {
 
         
     }
+    
+    
+    @IBAction func addLikeSelected(_ sender: Any) {
+        detailPageObject?.addLikeAction(addCook: cook!)
+    }
+    
+    
+}
+
+extension DetailPageController : PresenterToViewDetailPageProtocol {
+    func toView(message:Int) {
+        if message == 1 {
+            alertMessage(title: "Success", message: "Adden cook to your like list")
+        }else{
+            alertMessage(title: "Warning", message: "Already on your list")
+        }
+        
+        
+    }
+    
+    func alertMessage(title:String,message:String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Okey", style: .default)
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: true)
+        
+    }
+    
     
 }
 

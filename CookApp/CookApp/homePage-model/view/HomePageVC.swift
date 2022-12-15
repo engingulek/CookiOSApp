@@ -113,7 +113,7 @@ extension HomePageVC :  UICollectionViewDataSource {
                 cell.cookImageView.kf.setImage(with: url)
                 cell.cookNameLabel.text = trendCook.name
                 if let rating = trendCook.rating,let minute = trendCook.minute {
-                    cell.cookRatingLabel.text = String(rating)
+                    cell.cookRatingLabel.text = String(Int(rating))
                     cell.cookMinunteLabel.text = String(minute)
             }
             

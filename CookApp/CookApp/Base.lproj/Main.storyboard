@@ -554,32 +554,48 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cj4-84-sYI">
-                                        <rect key="frame" x="0.0" y="127.99999999999999" width="295" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="127.99999999999999" width="147.66666666666666" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Steps"/>
                                         <connections>
                                             <action selector="toStepsViewAciton:" destination="Jqy-X1-6Kc" eventType="touchUpInside" id="Lf9-S5-IfH"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSt-JC-MfQ">
+                                        <rect key="frame" x="147.66666666666663" y="127.99999999999999" width="147.33333333333337" height="34.333333333333329"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Likes">
+                                            <color key="baseBackgroundColor" name="searchBarViewColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addLikeSelected:" destination="Jqy-X1-6Kc" eventType="touchUpInside" id="B2X-Of-rCk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="V1k-QE-eCG" firstAttribute="leading" secondItem="DGT-ai-fWM" secondAttribute="trailing" constant="8" symbolic="YES" id="2eJ-sC-Uun"/>
-                                    <constraint firstAttribute="trailing" secondItem="Cj4-84-sYI" secondAttribute="trailing" id="49t-d5-ers"/>
+                                    <constraint firstAttribute="bottom" secondItem="dSt-JC-MfQ" secondAttribute="bottom" id="4Pf-zM-OUW"/>
                                     <constraint firstItem="Uhn-PT-Ayz" firstAttribute="top" secondItem="zp1-Au-3pk" secondAttribute="top" id="4sr-Hv-Isx"/>
                                     <constraint firstItem="JEP-Xd-DQ3" firstAttribute="leading" secondItem="eiD-Op-bKj" secondAttribute="trailing" constant="8" symbolic="YES" id="6Xg-F4-G9s"/>
+                                    <constraint firstItem="dSt-JC-MfQ" firstAttribute="top" secondItem="eiD-Op-bKj" secondAttribute="bottom" constant="21.329999999999998" id="8Wy-MR-wYW"/>
+                                    <constraint firstItem="Cj4-84-sYI" firstAttribute="top" secondItem="DGT-ai-fWM" secondAttribute="bottom" constant="21.329999999999998" id="9Am-bf-Ptq"/>
                                     <constraint firstAttribute="trailing" secondItem="8Ay-X5-De3" secondAttribute="trailing" id="AJq-3Q-Von"/>
                                     <constraint firstItem="eiD-Op-bKj" firstAttribute="top" secondItem="Uhn-PT-Ayz" secondAttribute="bottom" constant="30" id="Ehb-1H-pzB"/>
+                                    <constraint firstAttribute="trailing" secondItem="dSt-JC-MfQ" secondAttribute="trailing" id="Ej7-Y8-5bm"/>
                                     <constraint firstItem="DGT-ai-fWM" firstAttribute="leading" secondItem="zp1-Au-3pk" secondAttribute="leading" constant="60" id="NOy-Ff-AGK"/>
                                     <constraint firstItem="8Ay-X5-De3" firstAttribute="top" secondItem="Uhn-PT-Ayz" secondAttribute="bottom" id="NYX-h5-6lk"/>
                                     <constraint firstItem="eiD-Op-bKj" firstAttribute="leading" secondItem="V1k-QE-eCG" secondAttribute="trailing" constant="36" id="Nd3-nD-pKb"/>
+                                    <constraint firstItem="Cj4-84-sYI" firstAttribute="width" secondItem="zp1-Au-3pk" secondAttribute="width" multiplier="0.5" id="Q8v-8e-j2v"/>
+                                    <constraint firstItem="dSt-JC-MfQ" firstAttribute="width" secondItem="zp1-Au-3pk" secondAttribute="width" multiplier="0.5" id="X5e-GZ-3UI"/>
                                     <constraint firstItem="8Ay-X5-De3" firstAttribute="leading" secondItem="zp1-Au-3pk" secondAttribute="leading" id="b5e-bF-Drg"/>
-                                    <constraint firstItem="Cj4-84-sYI" firstAttribute="leading" secondItem="zp1-Au-3pk" secondAttribute="leading" id="dbb-AO-Ozt"/>
                                     <constraint firstItem="JEP-Xd-DQ3" firstAttribute="top" secondItem="Uhn-PT-Ayz" secondAttribute="bottom" constant="35" id="g2u-fi-tZV"/>
+                                    <constraint firstItem="Cj4-84-sYI" firstAttribute="leading" secondItem="zp1-Au-3pk" secondAttribute="leading" id="gXt-IT-C9L"/>
                                     <constraint firstAttribute="trailing" secondItem="Uhn-PT-Ayz" secondAttribute="trailing" id="h8f-T6-V7r"/>
                                     <constraint firstItem="Uhn-PT-Ayz" firstAttribute="height" secondItem="zp1-Au-3pk" secondAttribute="height" multiplier="0.3" id="jQ3-Qf-dkS"/>
                                     <constraint firstItem="V1k-QE-eCG" firstAttribute="top" secondItem="Uhn-PT-Ayz" secondAttribute="bottom" constant="35" id="kO3-AD-4TK"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cj4-84-sYI" secondAttribute="bottom" id="kbd-W8-EzT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cj4-84-sYI" secondAttribute="bottom" id="oW2-9N-eiy"/>
                                     <constraint firstItem="DGT-ai-fWM" firstAttribute="top" secondItem="Uhn-PT-Ayz" secondAttribute="bottom" constant="30" id="pc2-0V-cFo"/>
                                     <constraint firstItem="Uhn-PT-Ayz" firstAttribute="leading" secondItem="zp1-Au-3pk" secondAttribute="leading" id="vgZ-0l-Rru"/>
                                 </constraints>
@@ -607,7 +623,9 @@
                             <constraint firstItem="8Hj-qA-k5c" firstAttribute="trailing" secondItem="zp1-Au-3pk" secondAttribute="trailing" constant="40" id="tib-B3-btW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="qbq-eQ-VAg"/>
+                    <navigationItem key="navigationItem" style="editor" id="qbq-eQ-VAg">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="categoryNameLabel" destination="8Ay-X5-De3" id="rtU-0P-Twl"/>
                         <outlet property="cookImage" destination="oe4-pJ-ufE" id="TUA-pG-J3j"/>
@@ -621,7 +639,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWq-Pc-wRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2937" y="-1102"/>
+            <point key="canvasLocation" x="2936.8000000000002" y="-1102.4630541871923"/>
         </scene>
         <!--Steps View-->
         <scene sceneID="5Jb-LU-DTE">
@@ -794,45 +812,12 @@
                         <segue destination="EeR-Xg-EPc" kind="relationship" relationship="viewControllers" id="QxE-lM-6Xs"/>
                         <segue destination="sL2-Q4-Q42" kind="relationship" relationship="viewControllers" id="sra-Pv-scY"/>
                         <segue destination="ScS-tH-AY1" kind="relationship" relationship="viewControllers" id="fCz-gg-n45"/>
-                        <segue destination="ioY-1r-tCG" kind="relationship" relationship="viewControllers" id="8ZJ-t4-XRO"/>
                         <segue destination="be3-vI-Qol" kind="relationship" relationship="viewControllers" id="tF3-Z8-0jb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCd-QX-WcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="697" y="-9"/>
-        </scene>
-        <!--Notifications-->
-        <scene sceneID="dfd-x8-gYh">
-            <objects>
-                <tableViewController id="6HD-GW-hYs" customClass="NoticationsView" customModule="CookApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6h1-nR-m0Q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationCell" id="tzJ-qD-oNA">
-                                <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tzJ-qD-oNA" id="LDR-oN-xKg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="6HD-GW-hYs" id="YYe-za-jRk"/>
-                            <outlet property="delegate" destination="6HD-GW-hYs" id="pST-u8-ddA"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Notifications" id="Hl0-5E-QfI"/>
-                    <connections>
-                        <outlet property="notificationsTableView" destination="6h1-nR-m0Q" id="y5F-ky-nWS"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4qP-2h-EQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4740" y="412"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EBW-0w-de9">
@@ -877,25 +862,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYZ-fA-fKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1271" y="652"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7OB-86-6d9">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ioY-1r-tCG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bell.fill" catalog="system" id="kRP-VY-MgX"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F0w-DW-PiE">
-                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6HD-GW-hYs" kind="relationship" relationship="rootViewController" id="V8x-7h-iou"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rMm-gY-Nc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3502" y="412"/>
         </scene>
         <!--My Account-->
         <scene sceneID="ser-n6-LHd">
@@ -1071,11 +1037,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2to-NW-JW1"/>
-        <segue reference="MFb-t7-6Y2"/>
+        <segue reference="7mG-jY-7r3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addImage" width="170.66667175292969" height="170.66667175292969"/>
-        <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="cooking" width="512" height="512"/>
         <image name="house" catalog="system" width="128" height="104"/>

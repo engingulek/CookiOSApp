@@ -8,6 +8,12 @@
 import Foundation
 
 class MyAccountRouter : AccountRouterProtocol {
+    static func myLikesTVC(tvc: MyCooksLikeTVC) {
+        let presenter = MyAccountPresenter()
+        tvc.myCookLikeTVCObject = presenter
+        tvc.myCookLikeTVCObject?.interactor = MyAccountInteractor()
+    }
+    
     static func myCooksTVC(tvc: MyCooksTVC) {
         let presenter = MyAccountPresenter()
         tvc.myCookTVCObject = presenter

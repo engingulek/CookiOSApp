@@ -18,6 +18,7 @@ class MyAccountView: UIViewController {
     
     @IBOutlet weak var myCooksCountLabel: UILabel!
     let myCooksTableView  = MyCooksTVC()
+    let myLikesTableView = MyCooksLikeTVC()
     @IBOutlet weak var nameSurname: UILabel!
     var myAccountObject : ViewToPresenterMyAccountProtocol?
     
@@ -37,11 +38,9 @@ class MyAccountView: UIViewController {
         nameSurname.text = userInfı.string(forKey: "name")
         
         myAccountObject?.getCooksAction()
+        myAccountObject?.getLikesAction()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        myAccountObject?.getCooksAction()
-    }
+   
     
     
     @IBAction func toCookSelected(_ sender: Any) {
@@ -52,7 +51,6 @@ class MyAccountView: UIViewController {
     }
     
     @IBAction func toLiskesSelected(_ sender: Any) {
-        let myLikesTableView = MyCooksLikeTVC()
         self.present(myLikesTableView, animated: true)
     }
     
@@ -74,16 +72,21 @@ class MyAccountView: UIViewController {
 
 
 extension MyAccountView : PresenterToViewAccountProtocol {
+    
     func toMyCooksCount(myCooksCount: Int) {
         DispatchQueue.main.async {
             self.myCooksCountLabel.text = "\(myCooksCount)"
         }
     }
     
-    func toLikesView(likes: Array<Cook>) {
+    func toLikesView(likes: Array<LikeCook>) {
+        DispatchQueue.main.async {
+            print("engin \(likes)")
+            self.myLikesTableView.myCoookList = likes
+            
+        }
         
     }
-    
     func toMyCooksView(cooks: Array<Cook>) {
         DispatchQueue.main.async {
             self.myCooksTableView.myCoookList = cooks

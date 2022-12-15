@@ -40,12 +40,11 @@ class MyCooksTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultSearchCookCell", for: indexPath) as! SearchCookResultTVC
         let cook = myCoookList[indexPath.row]
-        let url = URL(string: cook.imageURL!)
+        let url = URL(string: (cook.imageURL!))
         cell.cookImageView.kf.setImage(with: url)
         cell.cookName.text = cook.name
         let height =  tableView.layer.frame.size.height
         self.tableView.rowHeight = height/6
-
         return cell
     }
     

@@ -125,8 +125,11 @@ class AddCookView: UIViewController {
                             self.cookNameTextField.text = ""
                             self.cookMinuteTextField.text = ""
                             self.addedIngredientsList = []
+                            self.addedStepsList = []
                             self.categoryPickerView.reloadAllComponents()
                             self.cookImageView.image = UIImage(named: "addImage")
+                            self.addedIngredientsTableView.reloadData()
+                            self.stepTableView.reloadData()
                         }
                     }
                     

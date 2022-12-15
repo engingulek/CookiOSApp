@@ -11,7 +11,7 @@ class HomePageInteractor : PresenterToInteractorHomePageProtocol {
     var homePagePresenter: InteractorToPresenterHomePageProtocol?
     
     func getCook() {
-        APICaller.shared.fetchData(router: Constant.getCookRouter) { (response:Result<[Cook]?,Error>) in
+        APICaller.shared.fetchData(getrouter: Constant.getCookRouter) { (response:Result<[Cook]?,Error>) in
             switch response {
             case .success(let list):
                 self.homePagePresenter?.toHomePagePresenter(cookList: list!)
