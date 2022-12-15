@@ -13,6 +13,7 @@ struct Constant {
     static let getCategoryRouter = "categories"
     static let getCookRouter = "cooks"
     static let addCook = "addCook"
+    static let deleteData = "deleteData"
 }
 
 class APICaller {
@@ -71,6 +72,27 @@ class APICaller {
             }
             
         }
+    }
+    
+    
+    func deleteData(router:String,deleteId:String,completion:@escaping(Result<String,Error>)->()){
+        let url = "\(Constant.baseURL)\(router)"
+        let param = ["deleteId" :deleteId]
+        print(deleteId)
+        AF.request(url,method: .post,parameters: param,encoding: JSONEncoding.init()).response{ response in
+            if let data = response.data {
+                do {
+                    let result = try JSONSerialization.jsonObject(with: data)
+                    completion(.success("success"))
+                    print(result)
+                }catch{
+                    print("Send Data Error \(error.localizedDescription)")
+                    completion(.failure(error))
+                }
+            }
+            
+        }
+        
     }
 }
 

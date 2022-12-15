@@ -8,6 +8,7 @@
 import Foundation
 
 struct Cook:Codable {
+    var _id:String?
     var userId:String?
     var imageURL:String?
     var name:String?

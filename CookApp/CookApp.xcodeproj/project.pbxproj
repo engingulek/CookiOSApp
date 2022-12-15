@@ -11,6 +11,10 @@
 		7D050F8C294B1C8D00156A46 /* MyCooksTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D050F8A294B1C8D00156A46 /* MyCooksTVC.xib */; };
 		7D050F90294B1E8700156A46 /* MyCooksLikeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D050F8E294B1E8700156A46 /* MyCooksLikeTVC.swift */; };
 		7D050F91294B1E8700156A46 /* MyCooksLikeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D050F8F294B1E8700156A46 /* MyCooksLikeTVC.xib */; };
+		7D050F97294B246C00156A46 /* MyAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D050F96294B246C00156A46 /* MyAccountProtocol.swift */; };
+		7D050F99294B267100156A46 /* MyAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D050F98294B267100156A46 /* MyAccountPresenter.swift */; };
+		7D050F9B294B28A000156A46 /* MyAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D050F9A294B28A000156A46 /* MyAccountRouter.swift */; };
+		7D050F9D294B2B3100156A46 /* MyAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D050F9C294B2B3100156A46 /* MyAccountInteractor.swift */; };
 		7D0BB101290EB85C00D1B6FC /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB100290EB85C00D1B6FC /* HomePagePresenter.swift */; };
 		7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB103290EB8D300D1B6FC /* HomePageProtocol.swift */; };
 		7D0BB108290EBBD900D1B6FC /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB107290EBBD900D1B6FC /* HomePageInteractor.swift */; };
@@ -76,6 +80,10 @@
 		7D050F8A294B1C8D00156A46 /* MyCooksTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCooksTVC.xib; sourceTree = "<group>"; };
 		7D050F8E294B1E8700156A46 /* MyCooksLikeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCooksLikeTVC.swift; sourceTree = "<group>"; };
 		7D050F8F294B1E8700156A46 /* MyCooksLikeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCooksLikeTVC.xib; sourceTree = "<group>"; };
+		7D050F96294B246C00156A46 /* MyAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountProtocol.swift; sourceTree = "<group>"; };
+		7D050F98294B267100156A46 /* MyAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountPresenter.swift; sourceTree = "<group>"; };
+		7D050F9A294B28A000156A46 /* MyAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountRouter.swift; sourceTree = "<group>"; };
+		7D050F9C294B2B3100156A46 /* MyAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountInteractor.swift; sourceTree = "<group>"; };
 		7D0BB100290EB85C00D1B6FC /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
 		7D0BB103290EB8D300D1B6FC /* HomePageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProtocol.swift; sourceTree = "<group>"; };
 		7D0BB107290EBBD900D1B6FC /* HomePageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageInteractor.swift; sourceTree = "<group>"; };
@@ -174,6 +182,38 @@
 				7D050F8F294B1E8700156A46 /* MyCooksLikeTVC.xib */,
 			);
 			path = MyCookLikes;
+			sourceTree = "<group>";
+		};
+		7D050F92294B243F00156A46 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7D050F98294B267100156A46 /* MyAccountPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7D050F93294B244900156A46 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7D050F9C294B2B3100156A46 /* MyAccountInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		7D050F94294B244F00156A46 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7D050F96294B246C00156A46 /* MyAccountProtocol.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		7D050F95294B245600156A46 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				7D050F9A294B28A000156A46 /* MyAccountRouter.swift */,
+			);
+			path = router;
 			sourceTree = "<group>";
 		};
 		7D0BB0FF290EB84000D1B6FC /* presenter */ = {
@@ -456,6 +496,10 @@
 		7D8D12622944B30B00E7C882 /* MyAccountPage-model */ = {
 			isa = PBXGroup;
 			children = (
+				7D050F95294B245600156A46 /* router */,
+				7D050F94294B244F00156A46 /* protocol */,
+				7D050F93294B244900156A46 /* interactor */,
+				7D050F92294B243F00156A46 /* presenter */,
 				7D8D12632944B31C00E7C882 /* view */,
 			);
 			path = "MyAccountPage-model";
@@ -771,6 +815,7 @@
 				7D2365A72944864200F0618B /* SearchResultView.swift in Sources */,
 				7D0BB10B290EBF3E00D1B6FC /* HomePageRouter.swift in Sources */,
 				7D8D12652944B33900E7C882 /* MyAccountView.swift in Sources */,
+				7D050F97294B246C00156A46 /* MyAccountProtocol.swift in Sources */,
 				7D2365AB29448E2D00F0618B /* SearchCookResultTVC.swift in Sources */,
 				7DC324D52949CBC000328D18 /* AddCookRouter.swift in Sources */,
 				7D8D12612944A8AF00E7C882 /* NoticationsView.swift in Sources */,
@@ -789,13 +834,16 @@
 				7DD592FD2943A1F200C1859F /* AddCook.swift in Sources */,
 				7D5B8F352948A0CA0046DCE9 /* SearchPagePresenter.swift in Sources */,
 				7DC324C82949C13800328D18 /* SendDataResult.swift in Sources */,
+				7D050F9B294B28A000156A46 /* MyAccountRouter.swift in Sources */,
 				7DCC483F294612C5000BF48D /* APICaller.swift in Sources */,
 				7D209C2E2909571C009015DB /* SceneDelegate.swift in Sources */,
 				7DBC2A34294A4A4600515A89 /* SingInAndUpViewController.swift in Sources */,
 				7DCC48322945EAC5000BF48D /* Category.swift in Sources */,
+				7D050F9D294B2B3100156A46 /* MyAccountInteractor.swift in Sources */,
 				7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */,
 				7D050F90294B1E8700156A46 /* MyCooksLikeTVC.swift in Sources */,
 				7DC324D22949C54C00328D18 /* AddCookInteractor.swift in Sources */,
+				7D050F99294B267100156A46 /* MyAccountPresenter.swift in Sources */,
 				7D050F8B294B1C8D00156A46 /* MyCooksTVC.swift in Sources */,
 				7DC324D02949C4CE00328D18 /* AddCookPresenter.swift in Sources */,
 				7D8475CF290961B5000D6EA1 /* Slide.swift in Sources */,

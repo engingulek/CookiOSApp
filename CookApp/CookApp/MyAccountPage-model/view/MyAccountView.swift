@@ -16,9 +16,16 @@ class MyAccountView: UIViewController {
     let userInfı = UserDefaults.standard
     @IBOutlet weak var accountView: UIView!
     
+    @IBOutlet weak var myCooksCountLabel: UILabel!
+    let myCooksTableView  = MyCooksTVC()
     @IBOutlet weak var nameSurname: UILabel!
+    var myAccountObject : ViewToPresenterMyAccountProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        MyAccountRouter.createView(view: self)
 
         
         signOutButton.layer.cornerRadius = 20
@@ -29,11 +36,16 @@ class MyAccountView: UIViewController {
         
         nameSurname.text = userInfı.string(forKey: "name")
         
-        
+        myAccountObject?.getCooksAction()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        myAccountObject?.getCooksAction()
     }
     
+    
     @IBAction func toCookSelected(_ sender: Any) {
-        let myCooksTableView  = MyCooksTVC()
+        
         self.present(myCooksTableView, animated: true)
         
         
@@ -55,6 +67,30 @@ class MyAccountView: UIViewController {
      }
         
     }
+    
+    
    
+}
 
+
+extension MyAccountView : PresenterToViewAccountProtocol {
+    func toMyCooksCount(myCooksCount: Int) {
+        DispatchQueue.main.async {
+            self.myCooksCountLabel.text = "\(myCooksCount)"
+        }
+    }
+    
+    func toLikesView(likes: Array<Cook>) {
+        
+    }
+    
+    func toMyCooksView(cooks: Array<Cook>) {
+        DispatchQueue.main.async {
+            self.myCooksTableView.myCoookList = cooks
+            
+        }
+        
+    }
+    
+    
 }

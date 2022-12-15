@@ -914,8 +914,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrF-bB-5rW">
-                                        <rect key="frame" x="175.66666666666666" y="160" width="24" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrF-bB-5rW">
+                                        <rect key="frame" x="181.33333333333334" y="160" width="12.333333333333343" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -993,6 +993,7 @@
                         <outlet property="accountView" destination="JV6-W5-T1g" id="HoI-gi-y9c"/>
                         <outlet property="cooksButton" destination="6qV-cg-pny" id="bcA-oS-jxS"/>
                         <outlet property="likesButton" destination="I8g-2m-3Cd" id="ea7-Ap-0XE"/>
+                        <outlet property="myCooksCountLabel" destination="FrF-bB-5rW" id="eoi-xB-gAe"/>
                         <outlet property="nameSurname" destination="GUx-1U-JNI" id="BkF-N7-IhO"/>
                         <outlet property="signOutButton" destination="Hbt-K0-ZzH" id="Cea-I2-EEk"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toFirstPage" modalPresentationStyle="fullScreen" id="FlW-kv-nyg"/>
