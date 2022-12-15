@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     var resultSearchList = [String]()
     var cookResultList = [Cook]()
     let searchInfoDatabase = UserDefaults.standard
+    let userInfo = UserDefaults.standard
     var searchDidChangeTextState = false
     var searchPageObject:ViewToPresenterSearchPageProtocol?
     override func viewDidLoad() {
@@ -91,12 +92,16 @@ extension SearchViewController : UITableViewDelegate,UITableViewDataSource {
         
         if searchDidChangeTextState {
         let cell = searchHistoryTableView.dequeueReusableCell(withIdentifier: "resultSearchCookCell",for: indexPath) as! SearchCookResultTVC
+            let userId = userInfo.string(forKey: "userID")
             let cook = cookResultList[indexPath.row]
             let height =  self.searchHistoryTableView.layer.frame.size.height
             self.searchHistoryTableView.rowHeight = height/6
             let url = URL(string: cook.imageURL!)
-            cell.cookImageView.kf.setImage(with: url)
-            cell.cookName?.text = cook.name
+            if cook.userId != userId {
+                cell.cookImageView.kf.setImage(with: url)
+                cell.cookName?.text = cook.name
+            }
+           
             return cell
             
         }else{
@@ -112,7 +117,7 @@ extension SearchViewController : UITableViewDelegate,UITableViewDataSource {
             let cook  = cookResultList[indexPath.row]
             performSegue(withIdentifier: "searchPageToDetail", sender: cook)
         }else{
-            var selectedSearch = resultSearchList[indexPath.row]
+            let selectedSearch = resultSearchList[indexPath.row]
             print(selectedSearch)
             searchBar.text = selectedSearch
             searchHistoryTableView.register(UINib(nibName: "SearchCookResultTVC", bundle: nil), forCellReuseIdentifier: "resultSearchCookCell")

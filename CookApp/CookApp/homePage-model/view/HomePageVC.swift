@@ -15,6 +15,7 @@ class HomePageVC: UIViewController{
     var homePageObject : ViewToPresenterHomePageProtocol?
     var trendList = [Cook]()
     var newList = [Cook]()
+    let userInfo = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -102,19 +103,26 @@ extension HomePageVC :  UICollectionViewDataSource {
   
     /// trendsCollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let userId = userInfo.string(forKey: "userID")
         if collectionView == self.trendsCookCollectionView {
             let cell : TrendsCVC = trendsCookCollectionView.dequeueReusableCell(withReuseIdentifier: "cookCell", for: indexPath) as! TrendsCVC
             cell.layer.cornerRadius = 20
             let trendCook = trendList[indexPath.row]
-            let url = URL(string: trendCook.imageURL!)
-            cell.cookImageView.kf.setImage(with: url)
-            cell.cookNameLabel.text = trendCook.name
-            if let rating = trendCook.rating,let minute = trendCook.minute {
-                cell.cookRatingLabel.text = String(rating)
-                cell.cookMinunteLabel.text = String(minute)
+            if trendCook.userId != userId{
+                let url = URL(string: trendCook.imageURL!)
+                cell.cookImageView.kf.setImage(with: url)
+                cell.cookNameLabel.text = trendCook.name
+                if let rating = trendCook.rating,let minute = trendCook.minute {
+                    cell.cookRatingLabel.text = String(rating)
+                    cell.cookMinunteLabel.text = String(minute)
+            }
+            
+           
             }
             
             cell.cookCategoryLabel.text = trendCook.category?.categoryName
+            
+            
             return cell
             
             /// newCook collectionview
@@ -125,10 +133,16 @@ extension HomePageVC :  UICollectionViewDataSource {
             cell.layer.frame.size.height = 80
             cell.layer.frame.size.width = widthCVC
             let newCook = newList[indexPath.row]
-            let url = URL(string: (newCook.imageURL!))
-            cell.foodImageView.kf.setImage(with: url)
-            cell.name.text = newCook.name
+            
+            if newCook.userId != userId{
+                let url = URL(string: (newCook.imageURL!))
+                cell.foodImageView.kf.setImage(with: url)
+                cell.name.text = newCook.name
+                print(newCook.userId)
+                
+            }
             return cell
+          
         }
     }
     

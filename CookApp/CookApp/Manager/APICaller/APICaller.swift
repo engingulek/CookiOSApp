@@ -43,9 +43,10 @@ class APICaller {
         /*formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
          let parsedDate = formatter.date(from: "\(currentDate)")*/
         print(currentDate)
-            
-        
-        let params : Parameters = ["imageURL":data.imageURL!,
+        let userInfo = UserDefaults.standard
+        let userId = userInfo.string(forKey: "userID")
+        let params : Parameters = [  "userId" : userId!,
+                                   "imageURL":data.imageURL!,
                                    "name":data.name!,
                                    "category" : [
                                     "_id":data.category?._id,

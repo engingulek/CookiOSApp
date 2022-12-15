@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D050F8B294B1C8D00156A46 /* MyCooksTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D050F89294B1C8D00156A46 /* MyCooksTVC.swift */; };
+		7D050F8C294B1C8D00156A46 /* MyCooksTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D050F8A294B1C8D00156A46 /* MyCooksTVC.xib */; };
+		7D050F90294B1E8700156A46 /* MyCooksLikeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D050F8E294B1E8700156A46 /* MyCooksLikeTVC.swift */; };
+		7D050F91294B1E8700156A46 /* MyCooksLikeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D050F8F294B1E8700156A46 /* MyCooksLikeTVC.xib */; };
 		7D0BB101290EB85C00D1B6FC /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB100290EB85C00D1B6FC /* HomePagePresenter.swift */; };
 		7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB103290EB8D300D1B6FC /* HomePageProtocol.swift */; };
 		7D0BB108290EBBD900D1B6FC /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BB107290EBBD900D1B6FC /* HomePageInteractor.swift */; };
@@ -68,6 +72,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D050F89294B1C8D00156A46 /* MyCooksTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCooksTVC.swift; sourceTree = "<group>"; };
+		7D050F8A294B1C8D00156A46 /* MyCooksTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCooksTVC.xib; sourceTree = "<group>"; };
+		7D050F8E294B1E8700156A46 /* MyCooksLikeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCooksLikeTVC.swift; sourceTree = "<group>"; };
+		7D050F8F294B1E8700156A46 /* MyCooksLikeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCooksLikeTVC.xib; sourceTree = "<group>"; };
 		7D0BB100290EB85C00D1B6FC /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
 		7D0BB103290EB8D300D1B6FC /* HomePageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProtocol.swift; sourceTree = "<group>"; };
 		7D0BB107290EBBD900D1B6FC /* HomePageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageInteractor.swift; sourceTree = "<group>"; };
@@ -148,6 +156,24 @@
 				7D59E654290BFB3000129E67 /* trends */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		7D050F84294B1A7000156A46 /* MyCooksList */ = {
+			isa = PBXGroup;
+			children = (
+				7D050F89294B1C8D00156A46 /* MyCooksTVC.swift */,
+				7D050F8A294B1C8D00156A46 /* MyCooksTVC.xib */,
+			);
+			path = MyCooksList;
+			sourceTree = "<group>";
+		};
+		7D050F8D294B1E6500156A46 /* MyCookLikes */ = {
+			isa = PBXGroup;
+			children = (
+				7D050F8E294B1E8700156A46 /* MyCooksLikeTVC.swift */,
+				7D050F8F294B1E8700156A46 /* MyCooksLikeTVC.xib */,
+			);
+			path = MyCookLikes;
 			sourceTree = "<group>";
 		};
 		7D0BB0FF290EB84000D1B6FC /* presenter */ = {
@@ -438,6 +464,8 @@
 		7D8D12632944B31C00E7C882 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				7D050F8D294B1E6500156A46 /* MyCookLikes */,
+				7D050F84294B1A7000156A46 /* MyCooksList */,
 				7D8D12642944B33900E7C882 /* MyAccountView.swift */,
 			);
 			path = view;
@@ -706,12 +734,14 @@
 			files = (
 				7D2365AC29448E2D00F0618B /* SearchCookResultTVC.xib in Resources */,
 				7DFBD9472916CB6300C73B8C /* IngredientTVC.xib in Resources */,
+				7D050F91294B1E8700156A46 /* MyCooksLikeTVC.xib in Resources */,
 				7D209C382909571D009015DB /* LaunchScreen.storyboard in Resources */,
 				7D209C352909571D009015DB /* Assets.xcassets in Resources */,
 				7D9FEBA5290AFC400034C650 /* TrendsCVC.xib in Resources */,
 				7D59E661290C576900129E67 /* newCookCVC.xib in Resources */,
 				7D8065822934E9400023E60E /* CookTVC.xib in Resources */,
 				7DC324DF294A1CF400328D18 /* GoogleService-Info.plist in Resources */,
+				7D050F8C294B1C8D00156A46 /* MyCooksTVC.xib in Resources */,
 				7D59E659290BFB6100129E67 /* CategoriesCVC.xib in Resources */,
 				7D209C332909571C009015DB /* Main.storyboard in Resources */,
 			);
@@ -764,7 +794,9 @@
 				7DBC2A34294A4A4600515A89 /* SingInAndUpViewController.swift in Sources */,
 				7DCC48322945EAC5000BF48D /* Category.swift in Sources */,
 				7D0BB104290EB8D300D1B6FC /* HomePageProtocol.swift in Sources */,
+				7D050F90294B1E8700156A46 /* MyCooksLikeTVC.swift in Sources */,
 				7DC324D22949C54C00328D18 /* AddCookInteractor.swift in Sources */,
+				7D050F8B294B1C8D00156A46 /* MyCooksTVC.swift in Sources */,
 				7DC324D02949C4CE00328D18 /* AddCookPresenter.swift in Sources */,
 				7D8475CF290961B5000D6EA1 /* Slide.swift in Sources */,
 			);

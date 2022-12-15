@@ -113,7 +113,7 @@ class AddCookView: UIViewController {
                     }else{
                         uploadRef.downloadURL { url, error in
                             imageurl = url!.absoluteString
-                            let newCook = Cook(imageURL: imageurl,
+                            let newCook = Cook(userId: "",imageURL: imageurl,
                                                name: self.cookNameTextField.text,
                                                category: self.selectedCategory,
                                                detail: self.addedStepsList,

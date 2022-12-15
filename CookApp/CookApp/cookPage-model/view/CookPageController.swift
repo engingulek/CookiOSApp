@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 class CookPageController : UIViewController {
     @IBOutlet weak var cookCategoriesCollectionView: UICollectionView!
-    
+    let userInfo = UserDefaults.standard
     @IBOutlet weak var cooksTableView: UITableView!
     var cookPageObject : ViewToPresenterCookPageProtocol?
     var categories = [Category]()
@@ -128,14 +128,17 @@ extension CookPageController : UITableViewDelegate,UITableViewDataSource  {
         return cooks.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let userId = userInfo.string(forKey: "userID")
         let cell : CookTVC = cooksTableView.dequeueReusableCell(withIdentifier: "cookCell",for:indexPath)
         as! CookTVC
         let height = self.cooksTableView.layer.frame.size.height
         self.cooksTableView.rowHeight = height/5
         let cook = cooks[indexPath.row]
-        cell.name.text = cook.name
-        let url = URL(string: cook.imageURL!)
-        cell.cookImage.kf.setImage(with: url)
+        if cook.userId != userId {
+            cell.name.text = cook.name
+            let url = URL(string: cook.imageURL!)
+            cell.cookImage.kf.setImage(with: url)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

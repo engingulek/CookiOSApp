@@ -28,8 +28,20 @@ class MyAccountView: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         
         nameSurname.text = userInfı.string(forKey: "name")
-        //resultSearchList = searchInfoDatabase.array(forKey: "resultSearchList") as? [String] ?? [String]()
         
+        
+    }
+    
+    @IBAction func toCookSelected(_ sender: Any) {
+        let myCooksTableView  = MyCooksTVC()
+        self.present(myCooksTableView, animated: true)
+        
+        
+    }
+    
+    @IBAction func toLiskesSelected(_ sender: Any) {
+        let myLikesTableView = MyCooksLikeTVC()
+        self.present(myLikesTableView, animated: true)
     }
     
 
@@ -43,14 +55,6 @@ class MyAccountView: UIViewController {
      }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
