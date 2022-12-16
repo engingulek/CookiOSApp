@@ -378,6 +378,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Cook" id="XUs-yA-XXS">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="L3p-5p-dZ6">
+                            <color key="tintColor" systemColor="linkColor"/>
                             <connections>
                                 <action selector="saveCookClicked:" destination="ECg-ck-bJT" id="YyM-kf-ERY"/>
                             </connections>
@@ -446,9 +447,10 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A7-J6-DjT">
-                                <rect key="frame" x="300.66666666666669" y="374.33333333333331" width="69.333333333333314" height="28"/>
+                                <rect key="frame" x="303.66666666666669" y="374.33333333333331" width="66.333333333333314" height="28"/>
+                                <color key="tintColor" systemColor="linkColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="More -&gt;">
+                                <buttonConfiguration key="configuration" style="plain" title="More-&gt;">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -530,6 +532,7 @@
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eiD-Op-bKj">
                                         <rect key="frame" x="153" y="79.666666666666686" width="28" height="26.666666666666671"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="66Z-ME-br1"/>
                                             <constraint firstAttribute="width" constant="28" id="gMY-kS-P3a"/>
@@ -824,10 +827,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SuE-2X-zL9">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="searchBarViewColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

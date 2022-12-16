@@ -135,32 +135,6 @@ class APICaller {
             }
         }
     }
-    
-    /*func deleteData(getrouter:DeleteRouter,deleteId:String,completion:@escaping(Result<String,Error>)->()){
-        
-        let router: DeleteRouter = getrouter
-        var url = ""
-        var params : Parameters = [:]
-        switch router {
-        case .deleteMyCook:
-            url = "\(Constant.baseURL)\(router)"
-            params = ["deleteId" : deleteId]
-            
-        }
-        print(params)
-            AF.request(url,method: .post,parameters: params,encoding: JSONEncoding.init()).response{ response in
-                if let data = response.data {
-                    do {
-                        let result = try JSONSerialization.jsonObject(with: data)
-                        completion(.success("success"))
-                        print(result)
-                    }catch{
-                        print("Send Data Error \(error.localizedDescription)")
-                        completion(.failure(error))
-                    }
-                }
-            }
-        }*/
 }
 
 
